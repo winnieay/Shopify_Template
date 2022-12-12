@@ -149,7 +149,7 @@
           "logo": "{{ shop.brand.logo }}",
           "logo_width": 170,
           "logo_position": "middle-left",
-          "menu": "",
+          "menu": "main-menu",
           "menu_type_desktop": "dropdown",
           "show_line_separator": false,
           "enable_sticky_header": false,
