@@ -223,6 +223,13 @@
 
 /* base */
 
+.shopify-section-template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e{
+
+  position: sticky;
+  top: 0%;
+  background-color: brown;
+}
+
 .no-js:not(html) {
   display: none !important;
 }
@@ -2247,15 +2254,6 @@ input[type='checkbox'] {
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-  
-    /*WI MO
-    HEADER
-  */
-  top: 0px;
-  left: 0px;
-  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
-  opacity: 0.5;
 }
 
 .header {
