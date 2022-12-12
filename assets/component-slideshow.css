@@ -15,6 +15,15 @@ slideshow-component .slideshow.banner {
   flex-wrap: nowrap;
   margin: 0;
   gap: 0;
+  /*
+  WI MO
+  SLIDER
+  */
+  top: 0px;
+  left: 0px;
+  background: transparent url('img/top-view-salts-cream-container.png') 0% 0% no-repeat padding-box;
+  opacity: 1;
+    
 }
 
 .slideshow__slide {
