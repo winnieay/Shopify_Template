@@ -207,6 +207,7 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+        background-color:transparent;
       }
 
       @media screen and (min-width: 750px) {
@@ -246,8 +247,9 @@
     {%- endif -%}
 
     {% section 'announcement-bar' %}
-    {% section 'header' %}
+    #{% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+    {% section 'header' %}
       {{ content_for_layout }}
     </main>
 
