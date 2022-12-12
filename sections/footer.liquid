@@ -141,10 +141,8 @@
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
             {%- endform -%}
-          </div>
-        {%- endif -%}
 
-        {%- if section.settings.show_social -%}
+            {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
             {%- if settings.social_twitter_link != blank -%}
               <li class="list-social__item">
@@ -220,6 +218,11 @@
             {%- endif -%}
           </ul>
         {%- endif -%}
+
+          </div>
+        {%- endif -%}
+
+        
       </div>
     </div>
   {%- endif -%}
@@ -516,7 +519,7 @@
     {
       "type": "text",
       "id": "newsletter_heading",
-      "default": "We send fun emails! 給你更多有趣資訊",
+      "default": "Subscribe to our emails",
       "label": "t:sections.footer.settings.newsletter_heading.label"
     },
     {
