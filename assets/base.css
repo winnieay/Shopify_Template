@@ -2242,6 +2242,16 @@ input[type='checkbox'] {
   position: relative;
   background-color: rgb(var(--color-background));
   z-index: 1;
+  /*WI MO
+    HEADER
+  */
+  top: 0px;
+  left: 0px;
+  width: 1920px;
+  height: 115px;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
+  opacity: 0.5;
 }
 
 .header-wrapper--border-bottom {
