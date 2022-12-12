@@ -1,7 +1,80 @@
 {
   "sections": {
+    "dceebf0e-d7b5-4d3e-b397-dd09b953901e": {
+      "type": "slideshow",
+      "blocks": {
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-brushes.jpg",
+            "heading": "1. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "dee139c5-0092-4bba-a6bd-3b8c572d856f": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0",
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1",
+        "dee139c5-0092-4bba-a6bd-3b8c572d856f"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 9,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
+      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -209,67 +282,15 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "dceebf0e-d7b5-4d3e-b397-dd09b953901e": {
-      "type": "slideshow",
-      "blocks": {
-        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0",
-        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "adapt_image",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
     }
   },
   "order": [
+    "dceebf0e-d7b5-4d3e-b397-dd09b953901e",
     "image_banner",
     "rich_text",
     "featured_collection",
     "collage",
     "video",
-    "multicolumn",
-    "dceebf0e-d7b5-4d3e-b397-dd09b953901e"
+    "multicolumn"
   ]
 }
