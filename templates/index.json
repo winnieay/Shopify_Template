@@ -16,7 +16,7 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "image_overlay_opacity": 30,
+            "image_overlay_opacity": 50,
             "color_scheme": "accent-1",
             "text_alignment_mobile": "center"
           }
@@ -34,7 +34,7 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "image_overlay_opacity": 30,
+            "image_overlay_opacity": 50,
             "color_scheme": "accent-1",
             "text_alignment_mobile": "center"
           }
@@ -52,7 +52,25 @@
             "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
-            "image_overlay_opacity": 30,
+            "image_overlay_opacity": 50,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "647f61fd-ccbb-400e-9795-751befff8a4e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
+            "heading": "4. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 50,
             "color_scheme": "accent-1",
             "text_alignment_mobile": "center"
           }
@@ -61,7 +79,8 @@
       "block_order": [
         "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0",
         "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1",
-        "dee139c5-0092-4bba-a6bd-3b8c572d856f"
+        "dee139c5-0092-4bba-a6bd-3b8c572d856f",
+        "647f61fd-ccbb-400e-9795-751befff8a4e"
       ],
       "settings": {
         "layout": "full_bleed",
