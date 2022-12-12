@@ -2247,14 +2247,7 @@ input[type='checkbox'] {
 
 .header-wrapper--border-bottom {
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
-}
-
-.header {
-  display: grid;
-  grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-
+  
     /*WI MO
     HEADER
   */
@@ -2263,6 +2256,14 @@ input[type='checkbox'] {
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
   background: rgba(255, 255, 255, 1) 0% 0% no-repeat padding-box;
   opacity: 0.5;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: 'left-icon heading icons';
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+
 }
 
 @media screen and (min-width: 990px) {
