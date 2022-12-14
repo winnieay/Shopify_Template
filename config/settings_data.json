@@ -161,6 +161,37 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "393c1aa0-136a-41f4-9521-3074bca736fd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hand-one-up.jpg",
+              "image_width": 140,
+              "alignment": "center"
+            }
+          },
+          "6d8d434f-3056-4d92-a30d-d199123f2e5c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hand-with-two-fingers-up-peace.jpg",
+              "image_width": 140,
+              "alignment": "center"
+            }
+          },
+          "14d61945-e282-4d14-8dda-5001820e482c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/hand-three-fingers-up.jpg",
+              "image_width": 140,
+              "alignment": "center"
+            }
+          }
+        },
+        "block_order": [
+          "393c1aa0-136a-41f4-9521-3074bca736fd",
+          "6d8d434f-3056-4d92-a30d-d199123f2e5c",
+          "14d61945-e282-4d14-8dda-5001820e482c"
+        ],
         "settings": {
           "color_scheme": "accent-2",
           "newsletter_enable": true,
