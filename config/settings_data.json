@@ -171,7 +171,6 @@
           },
           "footer-1": {
             "type": "link_list",
-            "disabled": true,
             "settings": {
               "heading": "Info",
               "menu": "footer"
@@ -195,7 +194,6 @@
           "color_scheme": "accent-2",
           "newsletter_enable": true,
           "newsletter_heading": "We send fun emails! 給你更多有趣資訊",
-          "newsletter_h2": "給你更多有趣資訊",
           "show_social": true,
           "enable_country_selector": true,
           "enable_language_selector": false,
