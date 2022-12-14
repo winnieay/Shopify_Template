@@ -148,7 +148,7 @@
           <h2 class="footer-block__heading" style="color:#C79090;">Follow @organicpiggyhk</h2>
           <h2 class="footer-block__heading" style="color:#C79090;">追蹤我們</h2>
           <br>
-            {%- if section.settings.show_social -%}
+          {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list">
             {%- if settings.social_twitter_link != blank -%}
               <li class="list-social__item">
@@ -223,21 +223,20 @@
               </li>
             {%- endif -%}
           </ul>
-        {%- endif -%}
-
-          </div>
-        {%- endif -%}
-        <br>
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
+          {%- endif -%}
+          <br>
+          {%- if section.settings.payment_enable -%}
+            <div class="footer__payment">
+              <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+              <ul class="list list-payment" role="list">
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class="list-payment__item">
+                    {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
           </div>
         {%- endif -%}
         
@@ -352,19 +351,16 @@
             </ul>
           </div>
         {%- endif -%}
-       
+       -->
         <div class="footer__copyright caption">
           <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
-          <small class="copyright__content">{{ powered_by_link }}</small> 
+          <small class="copyright__content">{{ powered_by_link }}</small> -->
         </div>
-        -->
+        
       </div>
     </div>
   </div>
-  <div class="footer__copyright caption">
-    <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
-    <small class="copyright__content">{{ powered_by_link }}</small> 
-  </div>
+
 </footer>
 
 {% javascript %}
