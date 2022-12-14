@@ -108,8 +108,8 @@
               <h2 class="footer-block__heading" style="color:#C79090;text-align:left;">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper" style="padding-left:0;">
+              <input type="hidden" name="contact[tags]" value="newsletter" style="padding-left:0;">
+              <div class="newsletter-form__field-wrapper">
                 <div class="field" >
                   <input
                     id="NewsletterForm--{{ section.id }}"
@@ -149,8 +149,7 @@
               {%- endif -%}
             {%- endform -%}
           <br>
-          <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;">Follow @organicpiggyhk</h2>
-          <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;">追蹤我們</h2>
+          <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;">Follow @organicpiggyhk<br>追蹤我們</h2>
           <br>
           {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list" style="align:left;">
