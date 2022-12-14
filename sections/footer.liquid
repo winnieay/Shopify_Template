@@ -145,11 +145,11 @@
               {%- endif -%}
             {%- endform -%}
           <br>
-          <h2 class="footer-block__heading" style="color:#C79090;">Follow @organicpiggyhk</h2>
-          <h2 class="footer-block__heading" style="color:#C79090;">追蹤我們</h2>
+          <h2 class="footer-block__heading" style="color:#C79090;align:left;">Follow @organicpiggyhk</h2>
+          <h2 class="footer-block__heading" style="color:#C79090;align:left;">追蹤我們</h2>
           <br>
           {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social" role="list">
+          <ul class="footer__list-social list-unstyled list-social" role="list" style="align:left;">
             {%- if settings.social_twitter_link != blank -%}
               <li class="list-social__item">
                 <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
@@ -224,7 +224,6 @@
             {%- endif -%}
           </ul>
           {%- endif -%}
-          <br>
           {%- if section.settings.payment_enable -%}
             <div class="footer__payment">
               <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -354,7 +353,6 @@
        -->
         <div class="footer__copyright caption">
           <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
-          <small class="copyright__content">{{ powered_by_link }}</small> -->
         </div>
         
       </div>
