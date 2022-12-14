@@ -94,11 +94,8 @@
     },
     "news": {
       "type": "news",
-      "disabled": true,
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "description": ""
+        "my_id": "Enter text here"
       }
     },
     "featured_collection": {
