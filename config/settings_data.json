@@ -171,8 +171,7 @@
           "payment_enable": true,
           "margin_top": 44,
           "padding_top": 8,
-          "padding_bottom": 8,
-          "CompanyLocation": "Rm A3, 10/F, BLOCK I, CAMEL PAINT BUILDING, 62 HOI YUEN ROAD, KWUN TONG, KOWLOON, Hong Kong 觀塘駱駝漆大廈1座10樓A3室"
+          "padding_bottom": 8
         }
       },
       "main-password-header": {
