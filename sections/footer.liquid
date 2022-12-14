@@ -97,16 +97,16 @@
         </div>
       {%- endif -%}
 
-      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;color:C79090;">
+      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;color:#C79090;">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
               <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter" style="background-color: white;">
+              <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="newsletter-form__field-wrapper">
-                <div class="field">
+                <div class="field" >
                   <input
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
@@ -126,8 +126,9 @@
                     {% endif %}
                     placeholder="Email address 電子郵件"
                     required
+                    style="background-color: white;"
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}" style="color:black">
                     Email address 電子郵件
                   </label>
                   <!--WI MO-->
