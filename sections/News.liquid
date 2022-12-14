@@ -1,16 +1,24 @@
+<div style="width: 1920px;height: auto;color: #C79090;">
+  {%- if section.settings.news_heading1!= blank or news_heading2!= blank-%}
+    <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;margin-bottom:40px;">{{section.settings.news_heading1}}<br>{{section.settings.news_heading1}}</h1>
+  {%- endif -%}
+
+</div>
 {% schema %}
   {
     "name": "News",
     "settings": [
-      {
-      "type": "header",
-      "content": "My settings"
+    {
+      "type": "text",
+      "id": "news_heading1",
+      "label": "Heading1",
+      "default": "NEWS"
     },
     {
       "type": "text",
-      "id": "my_id",
-      "label": "My setting label",
-      "default": "Enter text here"
+      "id": "news_heading2",
+      "label": "Heading2",
+      "default": "最新動向"
     }
     ]
   }
