@@ -102,7 +102,8 @@
         </div>
       {%- endif -%}
 -->
-      <div class="footerleft" style="position:absolute;left:10%;width:40%;padding:10px;display:inline;border: 3px solid green;">
+      <div class="footerleft" style="position:absolute;left:10%;width:40%;padding:10px;display:inline;">
+        <!--border: 3px solid green;-->
       <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if section.settings.logo != blank -%}
               {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
@@ -191,7 +192,8 @@
 
       </div>
 
-      <div class="footer-block--newsletter" style="position:absolute;right:10%;width:40%;padding:10px;display:inline;border: 3px solid green;">
+      <div class="footer-block--newsletter" style="position:absolute;right:10%;width:40%;padding:10px;display:inline;">
+            <!--border: 3px solid green;-->
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
