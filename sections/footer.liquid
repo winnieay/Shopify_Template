@@ -122,7 +122,32 @@
           {%- if section.settings.Address!= blank -%}
             <p style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;">{{section.settings.Address}}</p>
           {%- endif -%}
-
+          {%- if section.blocks.size > 0 -%}
+          <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+            {%- for block in section.blocks -%}
+              <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
+                {%- endif -%}
+  
+                {%- case block.type -%}
+                  
+                  {%- when 'link_list' -%}
+                    {%- if block.settings.menu != blank -%}
+                      <ul class="footer-block__details-content list-unstyled">
+                        {%- for link in block.settings.menu.links -%}
+                          <dl>
+                            <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                              {{ link.title }}
+                            </a>
+                          </dl>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+              </div>
+            {%- endfor -%}
+          </div>
+          {%- endif -%}
           <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;">
             <dt>Payment Method 付款方式</dt>
             <dt>Delivery Instructions 送貨說明</dt>
