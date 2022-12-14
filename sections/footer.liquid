@@ -227,7 +227,7 @@
 
           </div>
         {%- endif -%}
-        
+        <br>
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -352,13 +352,18 @@
             </ul>
           </div>
         {%- endif -%}
-        -->
+       
         <div class="footer__copyright caption">
           <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
-          <!--<small class="copyright__content">{{ powered_by_link }}</small>-->
+          <small class="copyright__content">{{ powered_by_link }}</small> 
         </div>
+        -->
       </div>
     </div>
+  </div>
+  <div class="footer__copyright caption">
+    <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
+    <small class="copyright__content">{{ powered_by_link }}</small> 
   </div>
 </footer>
 
