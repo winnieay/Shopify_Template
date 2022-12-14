@@ -199,7 +199,7 @@
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
               <input type="hidden" name="contact[tags]" value="newsletter" >
-              <div class="newsletter-form__field-wrapper">
+              <div class="newsletter-form__field-wrapper" style="width: 580;">
                 <div class="field" >
                   <input
                     id="NewsletterForm--{{ section.id }}"
@@ -226,7 +226,7 @@
                     Email address 電子郵件
                   </label>
                   <!--WI MO-->
-                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}" style="color:white;width: 103px;height: 41px;">
+                  <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}" style="color:white;width: 103px;height: 41px;margin-right:0px;">
                     遞交<!--{% render 'icon-arrow' %}-->
                   </button>
                 </div>
