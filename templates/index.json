@@ -92,6 +92,15 @@
         "accessibility_info": "Slideshow"
       }
     },
+    "news": {
+      "type": "news",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": ""
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
