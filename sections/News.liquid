@@ -5,7 +5,17 @@
   {%- endif -%}
 
   <div style="display: inline;">
-    <img src={{section.settings.image}} alt="Image" width="250" style="padding-left:100px;">
+    {%- if block.settings.image -%}
+            {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
+            {{ block.settings.image | image_url: width: 375 | image_tag:
+              loading: 'lazy',
+              height: height,
+              sizes: "100vw",
+              widths: '375'
+            }}
+          {%- else -%}
+            {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
   </div>
   <div style="display: inline;"></div>
 
