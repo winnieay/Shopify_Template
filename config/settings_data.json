@@ -173,7 +173,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/hand-one-up.jpg",
               "image_width": 140,
-              "alignment": "center"
+              "alignment": ""
             }
           },
           "6d8d434f-3056-4d92-a30d-d199123f2e5c": {
@@ -181,7 +181,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/hand-with-two-fingers-up-peace.jpg",
               "image_width": 140,
-              "alignment": "center"
+              "alignment": ""
             }
           },
           "14d61945-e282-4d14-8dda-5001820e482c": {
@@ -189,7 +189,7 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/hand-three-fingers-up.jpg",
               "image_width": 140,
-              "alignment": "center"
+              "alignment": ""
             }
           }
         },
