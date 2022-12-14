@@ -101,7 +101,7 @@
       this is a test
       </div>
 
-      <div class="footer-block--newsletter" style="position:absolute;right:10%;width:50%;padding: 10px;display:inline">
+      <div class="footer-block--newsletter" style="position:absolute;left:10%;width:50%;padding:10px;display:inline">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
@@ -358,7 +358,6 @@
         <div class="footer__copyright caption" style="position: fixed; bottom:10px;">
           <small class="copyright__content" style="color: #2B2626;">&copy; {{ 'now' | date: "%Y" }} Origanic {{ shop.name | link_to: routes.root_url }} Copyright</small>
         </div>
-        
       </div>
     </div>
   </div>
