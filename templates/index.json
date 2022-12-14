@@ -95,7 +95,14 @@
     "news": {
       "type": "news",
       "settings": {
-        "my_id": "Enter text here"
+        "news_heading1": "NEWS",
+        "news_heading2": "最新動向",
+        "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
+        "ImageHeading": "Heading",
+        "heading_size": "h1",
+        "subheading": "Tell your brand's story through images",
+        "button_label": "Button label",
+        "link": ""
       }
     },
     "featured_collection": {
