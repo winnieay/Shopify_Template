@@ -16,6 +16,8 @@
 }
 
 .list-payment__item {
+  width: 68px;
+  height: 43px;
   align-items: center;
   display: flex;
   padding: 0.5rem;
