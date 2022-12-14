@@ -166,7 +166,7 @@
           "newsletter_enable": true,
           "newsletter_heading": "We send fun emails! 給你更多有趣資訊",
           "show_social": true,
-          "enable_country_selector": true,
+          "enable_country_selector": false,
           "enable_language_selector": false,
           "payment_enable": true,
           "margin_top": 0,
