@@ -95,8 +95,7 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-      
-      {% assign newsletter.label = 'Email address 電子郵件' %}
+
       <div class="footer-block--newsletter">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
@@ -124,7 +123,7 @@
                     {% elsif form.posted_successfully? %}
                       aria-describedby="ContactFooter-success"
                     {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
+                    placeholder="Email address 電子郵件"
                     required
                   >
                   <label class="field__label" for="NewsletterForm--{{ section.id }}">
