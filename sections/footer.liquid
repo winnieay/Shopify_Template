@@ -118,7 +118,11 @@
               <span class="h2" style="color:black">{{ shop.address }}</span>
             {%- endif -%}
           </a>
-          <p style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;">Rm A3, 10/F, BLOCK I, CAMEL PAINT BUILDING, 62 HOI YUEN ROAD, KWUN TONG, KOWLOON, Hong Kong 觀塘駱駝漆大廈1座10樓A3室</p>
+
+          {%- if section.settings.Address!= blank -%}
+            <p style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;">{{section.settings.Address}}</p>
+          {%- endif -%}
+
           <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;">
             <dt>Payment Method 付款方式</dt>
             <dt>Delivery Instructions 送貨說明</dt>
