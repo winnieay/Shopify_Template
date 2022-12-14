@@ -1,7 +1,18 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+      {
+      "type": "header",
+      "content": "My settings"
+    },
+    {
+      "type": "text",
+      "id": "my_id",
+      "label": "My setting label",
+      "default": "Enter text here"
+    }
+    ]
   }
 {% endschema %}
 
