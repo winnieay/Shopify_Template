@@ -17,6 +17,7 @@
 {%- style -%}
   .footer {
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+
   }
 
   .section-{{ section.id }}-padding {
@@ -96,14 +97,14 @@
         </div>
       {%- endif -%}
 
-      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;">
+      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;font-color:C79090;">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
               <h2 class="footer-block__heading">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input type="hidden" name="contact[tags]" value="newsletter" style="background-color: white;">
               <div class="newsletter-form__field-wrapper">
                 <div class="field">
                   <input
