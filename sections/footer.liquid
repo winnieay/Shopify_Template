@@ -119,8 +119,8 @@
             {%- endif -%}
           </a>
 
-          {%- if section.settings.Address!= blank -%}
-            <p style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;margin-bottom:40px;">{{section.settings.Address}}</p>
+          {%- if section.settings.Address!= blank or section.settings.Address2!= blank-%}
+            <p style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #2B2626;margin-bottom:40px;">{{section.settings.Address}}<br>{{section.settings.Address2}}</p>
           {%- endif -%}
 
           {%- if section.blocks.size > 0 -%}
@@ -637,6 +637,12 @@
       "id": "Address",
       "default": "This is an address",
       "label": "Address"
+    },
+    {
+      "type": "text",
+      "id": "Address2",
+      "default": "This is an address2",
+      "label": "Address2"
     },
     {
       "type": "header",
