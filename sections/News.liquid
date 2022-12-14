@@ -4,7 +4,10 @@
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.news_heading2}}</h1>
   {%- endif -%}
 
-
+  <div style="display: inline;">
+    <img src={{section.settings.image}} alt="Image" width="250px">
+  </div>
+  <div style="display: inline;"></div>
 
 </div>
 {% schema %}
@@ -30,9 +33,9 @@
         },
         {
           "type": "text",
-          "id": "heading",
-          "default": "Image slide",
-          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+          "id": "ImageHeading",
+          "default": "Heading",
+          "label": "Image Heading"
         },
         {
           "type": "select",
