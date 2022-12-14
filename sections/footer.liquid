@@ -108,7 +108,7 @@
               <h2 class="footer-block__heading" style="color:#C79090;text-align:left;">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
-              <input type="hidden" name="contact[tags]" value="newsletter" style="left:0;">
+              <input type="hidden" name="contact[tags]" value="newsletter" >
               <div class="newsletter-form__field-wrapper">
                 <div class="field" >
                   <input
