@@ -152,7 +152,7 @@
           <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;">Follow @organicpiggyhk<br>追蹤我們</h2>
           <br>
           {%- if section.settings.show_social -%}
-          <ul class="footer__list-social list-unstyled list-social" role="list" style="align:left;">
+          <ul class="footer__list-social list-unstyled list-social" role="list" style="margin-left:0;">
             {%- if settings.social_twitter_link != blank -%}
               <li class="list-social__item">
                 <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
@@ -228,7 +228,7 @@
           </ul>
           {%- endif -%}
           {%- if section.settings.payment_enable -%}
-            <div class="footer__payment">
+            <div class="footer__payment" style="margin-left:0;">
               <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
               <ul class="list list-payment" role="list">
                 {%- for type in shop.enabled_payment_types -%}
