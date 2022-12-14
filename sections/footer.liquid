@@ -105,7 +105,7 @@
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
-              <h2 class="footer-block__heading" style="color:#C79090;text-align:left;padding-left:10px;">{{ section.settings.newsletter_heading | escape }}</h2>
+              <h2 class="footer-block__heading" style="color:#C79090;text-align:left;padding-left:10px;padding-bottom:10px;">{{ section.settings.newsletter_heading | escape }}</h2>
             {%- endif -%}
             {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
               <input type="hidden" name="contact[tags]" value="newsletter" >
@@ -149,7 +149,7 @@
               {%- endif -%}
             {%- endform -%}
           <br>
-          <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;padding-left:10px;">Follow @organicpiggyhk<br>追蹤我們</h2>
+          <h2 class="footer-block__heading" style="color:#C79090;align:left;text-align: left;padding-left:10px;padding-bottom:10px;">Follow @organicpiggyhk<br>追蹤我們</h2>
           {%- if section.settings.show_social -%}
           <ul class="footer__list-social list-unstyled list-social" role="list" style="margin-left:0;">
             {%- if settings.social_twitter_link != blank -%}
