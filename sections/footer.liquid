@@ -37,7 +37,7 @@
   }
 {%- endstyle -%}
 
-<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" style="font-color:black">
+<footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" style="color:black">
   {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social -%}
     <div class="footer__content-top page-width">
       {%- if section.blocks.size > 0 -%}
@@ -97,7 +97,7 @@
         </div>
       {%- endif -%}
 
-      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;font-color:C79090;">
+      <div class="footer-block--newsletter" style="position: absolute;right: 10%;width: 300px;padding: 10px;color:C79090;">
         {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}
