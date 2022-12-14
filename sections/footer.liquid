@@ -129,15 +129,13 @@
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
                 {%- endif -%}
-  
                 {%- case block.type -%}
-                  
                   {%- when 'link_list' -%}
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
                           <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;">
-                            <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}" style="pading:0px 0px 0px 0px;">
+                            <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}" style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;pading:0px 0px 0px 0px;">
                               {{ link.title }}
                             </a>
                           </dl>
@@ -149,6 +147,7 @@
             {%- endfor -%}
           </div>
           {%- endif -%}
+          <!--
           <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;">
             <dt>Payment Method 付款方式</dt>
             <dt>Delivery Instructions 送貨說明</dt>
@@ -156,6 +155,7 @@
             <dt>​Contact Us 聯絡我們</dt>
             <dt>Membership Discount 會員優惠</dt>
           </dl>
+          -->
           {%- if section.blocks.size > 0 -%}
           <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
