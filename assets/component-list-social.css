@@ -8,11 +8,15 @@
   .list-social {
     justify-content: center;
   }
+  .list-social__item .icon {
+    color:#C79090;
+  }
 }
 
 .list-social__item .icon {
   height: 1.8rem;
   width: 1.8rem;
+  color:#C79090;
 }
 
 .list-social__link {
@@ -24,4 +28,5 @@
 
 .list-social__link:hover .icon {
   transform: scale(1.07);
+  color:#C79090;
 }
