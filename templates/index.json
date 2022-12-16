@@ -115,20 +115,10 @@
     "Brands": {
       "type": "Brands",
       "blocks": {
-        "bea1eab3-557b-4b3b-957e-b22b0c25653f": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "4122f035-f3ca-462a-b71f-6001bae97d1c": {
-          "type": "image",
-          "settings": {
-          }
-        }
+        
       },
       "block_order": [
-        "bea1eab3-557b-4b3b-957e-b22b0c25653f",
-        "4122f035-f3ca-462a-b71f-6001bae97d1c"
+        
       ],
       "settings": {
         "brands_heading1": "OUR BRANDS",
