@@ -10,7 +10,7 @@
   {%- if section.blocks.size > 0 -%}
     <div class=" slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
       {%- for block in section.blocks -%}
-        <div class="item footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }} style="height:150px;width:auto;">
+        <div class="item footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }} style="width:150px;height:auto;">
           {%- case block.type -%}
             {%- when 'image' -%}
               <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
