@@ -5,17 +5,18 @@
   {%- endif -%}
 
   <div style="display: inline;">
-    {%- if section.settings.image!= blank-%}
+    {%- if settings.image!= blank-%}
+      <p>testing</p>
       <img
-        srcset= "{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
-        src="{{ block.settings.image | image_url: width: 200}}"
-        alt="{{ block.settings.image.alt | escape }}"
+        srcset= "{{settings.image | image_url: width:settings.image_width }}, {{settings.image | image_url: width: image_size_2x }} 2x"
+        src="{{settings.image | image_url: width: 200}}"
+        alt="image1"
         loading="lazy"
-        width="{{ block.settings.image.width }}"
-        height="{{ block.settings.image.height }}"
-        style="max-width: min(100%, {{ block.settings.image_width }}px);"
+        width="{{ settings.image.width }}"
+        height="{{ settings.image.height }}"
+        style="max-width: min(100%, {{ settings.image_width }}px);"
       >
-      {%- endif -%}  
+    {%- endif -%}  
       
       {%- if section.settings.ImageHeading!= blank-%}
         <p>{{section.settings.ImageHeading}}</p>
