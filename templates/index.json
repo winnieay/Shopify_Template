@@ -106,8 +106,8 @@
         "link": "shopify:\/\/blogs\/news"
       }
     },
-    "brands": {
-      "type": "brands",
+    "Brands": {
+      "type": "Brands",
       "settings": {
        
       }
