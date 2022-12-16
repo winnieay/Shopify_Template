@@ -94,7 +94,6 @@
     },
     "news": {
       "type": "news",
-      "disabled": true,
       "settings": {
         "news_heading1": "NEWS",
         "news_heading2": "最新動向",
