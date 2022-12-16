@@ -18,18 +18,23 @@
       >
       {%- endif -%}
   </div>
+
   <div style="display: inline;width:50%">
-  </div>
     {%- if section.settings.ImageHeading!= blank-%}
-      <p>{{section.settings.ImageHeading}}</p>
+      <h2 class="banner__heading {{ section.settings.ImageHeading_size }}">{{ section.settings.ImageHeading | escape }}</h2>
     {%- endif -%}   
     {%- if section.settings.subheading!= blank-%}
-      <p>{{section.settings.subheading}}</p>
+      <div class="banner__text" {{ block.shopify_attributes }}>
+        <span>{{ section.settings.subheading| escape }}</span>
+      </div>
     {%- endif -%} 
     {%- if section.settings.button_label!= blank-%}
-      <p>{{section.settings.button_label}}</p>
+      <div class="banner__buttons">
+        <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ settings.button_label| escape }}</a>
+      </div>
     {%- endif -%} 
   </div>
+
 </div>
 {% schema %}
   {
