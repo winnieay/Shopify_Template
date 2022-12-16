@@ -191,13 +191,21 @@
               "image_width": 140,
               "alignment": ""
             }
+          },
+          "d4359d99-1e00-4d55-a492-4e5095639ad7": {
+            "type": "image",
+            "settings": {
+              "image_width": 100,
+              "alignment": "center"
+            }
           }
         },
         "block_order": [
           "fc5aeb80-f86d-4343-9350-90a9540b75d4",
           "393c1aa0-136a-41f4-9521-3074bca736fd",
           "6d8d434f-3056-4d92-a30d-d199123f2e5c",
-          "14d61945-e282-4d14-8dda-5001820e482c"
+          "14d61945-e282-4d14-8dda-5001820e482c",
+          "d4359d99-1e00-4d55-a492-4e5095639ad7"
         ],
         "settings": {
           "color_scheme": "accent-2",

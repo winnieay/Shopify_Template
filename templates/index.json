@@ -112,6 +112,7 @@
         "d0cde632-2e80-4b36-8978-a886a084e615": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
             "image_width": 100,
             "alignment": "center"
           }
