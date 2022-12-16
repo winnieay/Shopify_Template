@@ -106,6 +106,12 @@
         "link": "shopify:\/\/blogs\/news"
       }
     },
+    "brands": {
+      "type": "brands",
+      "settings": {
+       
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "disabled": true,
