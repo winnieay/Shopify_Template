@@ -6,17 +6,17 @@
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}</h1>
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
   {%- endif -%}
-<!--
+
   {%- if section.blocks.size > 0 -%}
-    <div id="slider">
+    <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
       {%- for block in section.blocks -%}
-        <div class="{{ block.shopify_attributes }}">
+        <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
           {%- case block.type -%}
             {%- when 'image' -%}
-              <div class="slider {{ block.settings.alignment }}">
+              <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
                 {%- if block.settings.image != blank -%}
                   {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                  <img class="item" srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" style="max-width: min(100%, {{ block.settings.image_width }}px);">
+                  <img srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" style="max-width: min(100%, {{ block.settings.image_width }}px);">
                 {%- else -%}
                   {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                 {%- endif -%}
@@ -25,12 +25,10 @@
         </div>
       {%- endfor -%}
     </div>
-    <button class="ctrl-btn pro-prev">Prev</button>
-    <button class="ctrl-btn pro-next">Next</button>
   {%- endif -%}
--->
 
 
+<!--
   <div class="slide" id="slide">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
@@ -48,6 +46,7 @@
   <button class="ctrl-btn pro-prev">Prev</button>
   <button class="ctrl-btn pro-next">Next</button>
 </div>
+-->
 
 
 {% schema %}
