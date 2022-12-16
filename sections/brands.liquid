@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">
-<!--
+
 <div class="slider" id="slider" style="background: #F9F5F0 0% 0% no-repeat padding-box;height:400px;width:110%">
 {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
 <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}</h1>
 <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
 {%- endif -%}
-
+<!--
 {%- if section.blocks.size > 0 -%}
 <div class=" slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
 {%- for block in section.blocks -%} 
