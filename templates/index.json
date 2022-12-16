@@ -92,6 +92,14 @@
         "accessibility_info": "Slideshow"
       }
     },
+
+    "marquee": {
+      "type": "marquee",
+      "settings": {
+        
+      }
+    },
+
     "news": {
       "type": "news",
       "settings": {
