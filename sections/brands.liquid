@@ -8,30 +8,33 @@
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
   {%- endif -%}
 
-  <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
-    {%- if section.blocks.size > 0 -%}
-    {%- for block in section.blocks -%}
-      <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
-        {%- case block.type -%}
-          {%- when 'link_list' -%}
-            {%- if block.settings.menu != blank -%}
-              <ul class="footer-block__details-content list-unstyled" style="margin-bottom:40px;">
-                {%- for link in block.settings.menu.links -%}
-                  <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;margin-top: 0px;margin-bottom:0px">
-                    <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}" style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;pading:0px 0px 0px 0px;text-decoration: none;">
-                      {{ link.title }}
-                    </a>
-                  </dl>
-                {%- endfor -%}
-              </ul>
-            {%- endif -%}
-        {%- endcase -%}
-      </div>
-    {%- endfor -%}
-    {%- endif -%}
+  {%- if section.blocks.size > 0 -%}
+    <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+      {%- for block in section.blocks -%}
+        <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.heading != blank -%}
+            <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}
+            </h2>
+          {%- endif -%}
+          {%- case block.type -%}
+            {%- when 'image' -%}
+              <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                {%- if block.settings.image != blank -%}
+                  {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                  <img srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" style="max-width: min(100%, {{ block.settings.image_width }}px);">
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+        </div>
+      {%- endfor -%}
+    </div>
     <button class="ctrl-btn pro-prev">Prev</button>
     <button class="ctrl-btn pro-next">Next</button>
-  </div>
+  {%- endif -%}
+
+
 
   <div class="slide" id="slide">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
