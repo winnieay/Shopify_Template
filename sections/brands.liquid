@@ -37,12 +37,8 @@
 </div>
 <button class="ctrl-btn pro-prev">Prev</button>
 <button class="ctrl-btn pro-next">Next</button></div>{% schema %}
-
-
-
-{% schema %}
 {
-  "name": "Brands",
+  "name": "brands",
   "blocks": [
     {
       "type": "image",
@@ -75,8 +71,7 @@
     }
   ]
 }
-{% endschema%}
-
+{% endschema%}{% stylesheet %}
 
 {% javascript %}
 
@@ -137,9 +132,10 @@
         if (getChildrensChildren) 
           relevantChildren += getCount(parent.childNodes[i], true);
         
+
         relevantChildren++;
       }
     }
     return relevantChildren;
   }
-{% endjavascript %}}
+{% endjavascript %}}}
