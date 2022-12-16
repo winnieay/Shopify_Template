@@ -30,7 +30,7 @@
     {%- endif -%} 
     {%- if section.settings.button_label!= blank-%}
       <div class="banner__buttons">
-        <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ settings.button_label| escape }}</a>
+        <a{% if block.settings.link %} href="{{settings.setting.Button_link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ settings.button_label| escape }}</a>
       </div>
     {%- endif -%} 
   </div>
@@ -98,7 +98,7 @@
         },
         {
           "type": "url",
-          "id": "link",
+          "id": "Button_link",
           "label": "t:sections.slideshow.blocks.slide.settings.link.label"
         },
         {
