@@ -82,29 +82,14 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                loading: 'lazy',
-                height: height,
-                sizes: "100vw",
-                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              }}
+                 loading: 'lazy',
+                 height: height,
+                 sizes: "100vw",
+                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+               }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
-          <button type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-          </button>
-          <button type="button" class="next slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-          </button>
-          <noscript>
-            <div class="slider-buttons">
-              <div class="slider-counter">
-                {%- for block in section.blocks -%}
-                  <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
-                    {{ forloop.index }}
-                  </a>
-                {%- endfor -%}
-              </div>
-            </div>
-          </noscript>
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
