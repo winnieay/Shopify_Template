@@ -15,7 +15,19 @@
         height="{{ block.settings.image.height }}"
         style="max-width: min(100%, {{ block.settings.image_width }}px);"
       >
-      {%- endif -%}    
+      {%- endif -%}  
+      
+      {%- if section.settings.ImageHeading!= blank-%}
+        <p>{{section.settings.ImageHeading}}</p>
+      {%- endif -%}   
+      {%- if section.settings.subheading!= blank-%}
+        <p>{{section.settings.subheading}}</p>
+      {%- endif -%} 
+      {%- if section.settings.button_label!= blank-%}
+        <p>{{section.settings.button_label}}</p>
+      {%- endif -%} 
+
+      
   </div>
   <div style="display: inline;">
 
@@ -42,7 +54,7 @@
     {
           "type": "image_picker",
           "id": "image",
-          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+          "label": "Image1"
         },
         {
           "type": "text",
@@ -86,7 +98,7 @@
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.slideshow.blocks.slide.settings.link.label"
+          "label": "Image1"
         }
     ]
   }
