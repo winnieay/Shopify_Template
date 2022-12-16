@@ -9,9 +9,9 @@
   {%- endif -%}
 
   {%- if section.blocks.size > 0 -%}
-    <div class="slider  {{ footer_grid_class }}" id="slider">
+    <div class="slider " id="slider">
       {%- for block in section.blocks -%}
-        <div class="slider {% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+        <div class="slider {{ block.shopify_attributes }}">
           {%- case block.type -%}
             {%- when 'image' -%}
               <div class=" {{ block.settings.alignment }}">
