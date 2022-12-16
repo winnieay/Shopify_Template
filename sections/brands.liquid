@@ -39,6 +39,10 @@
 </div>
 <button class="ctrl-btn pro-prev">Prev</button>
 <button class="ctrl-btn pro-next">Next</button></div>{% schema %}
+
+
+
+{% schema %}
 {
   "name": "Brands",
   "blocks": [
@@ -74,10 +78,7 @@
   ]
 }
 {% endschema %}{% stylesheet %}
-
 {% javascript %}
-
-
 
   productScroll();
 
@@ -134,6 +135,8 @@
         if (getChildrensChildren) 
           relevantChildren += getCount(parent.childNodes[i], true);
         
+
+
         relevantChildren++;
       }
     }
