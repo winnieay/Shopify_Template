@@ -4,10 +4,8 @@
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.news_heading2}}</h1>
   {%- endif -%}
 
-  <div style="display: inline;">
-    <p>testing1</p>
+  <div style="display: inline;width:50%">
     {%- if section.settings.image -%}
-      <p>testing2</p>
       {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 500 -%}
       <img
         srcset= "{{section.settings.image | image_url: width:section.settings.image_width }}, {{section.settings.image | image_url: width: image_size_2x }} 2x"
@@ -19,24 +17,19 @@
         style="width:auto;max-height:250px; "
       >
       {%- endif -%}
-      
-      {%- if section.settings.ImageHeading!= blank-%}
-        <p>{{section.settings.ImageHeading}}</p>
-      {%- endif -%}   
-      {%- if section.settings.subheading!= blank-%}
-        <p>{{section.settings.subheading}}</p>
-      {%- endif -%} 
-      {%- if section.settings.button_label!= blank-%}
-        <p>{{section.settings.button_label}}</p>
-      {%- endif -%} 
-
-      
   </div>
-  <div style="display: inline;">
-
-
+  <div style="display: inline;width:50%">
   </div>
-
+    {%- if section.settings.ImageHeading!= blank-%}
+      <p>{{section.settings.ImageHeading}}</p>
+    {%- endif -%}   
+    {%- if section.settings.subheading!= blank-%}
+      <p>{{section.settings.subheading}}</p>
+    {%- endif -%} 
+    {%- if section.settings.button_label!= blank-%}
+      <p>{{section.settings.button_label}}</p>
+    {%- endif -%} 
+  </div>
 </div>
 {% schema %}
   {
