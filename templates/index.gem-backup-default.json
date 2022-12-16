@@ -1,0 +1,198 @@
+{
+  "sections": {
+    "dceebf0e-d7b5-4d3e-b397-dd09b953901e": {
+      "type": "slideshow",
+      "blocks": {
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-brushes.jpg",
+            "heading": "1. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 50,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg",
+            "heading": "2. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 50,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "dee139c5-0092-4bba-a6bd-3b8c572d856f": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bright-eye-makeup-brushes.jpg",
+            "heading": "3. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 50,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "647f61fd-ccbb-400e-9795-751befff8a4e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
+            "heading": "4. 廣告文案中用的假字",
+            "heading_size": "h1",
+            "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-left",
+            "show_text_box": true,
+            "text_alignment": "left",
+            "image_overlay_opacity": 50,
+            "color_scheme": "accent-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-0",
+        "template--17230120812863__dceebf0e-d7b5-4d3e-b397-dd09b953901e-1670868465bda0d4b1-1",
+        "dee139c5-0092-4bba-a6bd-3b8c572d856f",
+        "647f61fd-ccbb-400e-9795-751befff8a4e"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "large",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 9,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow"
+      }
+    },
+    "news": {
+      "type": "news",
+      "settings": {
+        "news_heading1": "NEWS",
+        "news_heading2": "最新動向",
+        "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
+        "ImageHeading": "廣告文案中用的假字",
+        "heading_size": "h1",
+        "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。為何要用「假字」？因為在一般的情況下，在向客戶作初步提案時，我們通常只會先擬好主副標題和畫面，其他的細節如文案等，會待雙方作進一步的商量後，才再發展下去。當然，撰稿員在撰寫真的文案前，文案的流程、長度、語調等等，其實心目中已有一個腹稿。這段假文案，你竟也真的用心細看，謝謝。",
+        "button_label": "了解更多",
+        "Button_link": "shopify:\/\/blogs\/news",
+        "link": "shopify:\/\/blogs\/news"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "dceebf0e-d7b5-4d3e-b397-dd09b953901e",
+    "news",
+    "featured_collection",
+    "multicolumn"
+  ]
+}
