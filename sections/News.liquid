@@ -6,7 +6,7 @@
 
   <div style="display: inline;">
     <p>testing1</p>
-    {%- if settings.image!= blank-%}
+    
       <p>testing2</p>
       <img
         srcset= "{{settings.image | image_url: width:settings.image_width }}, {{settings.image | image_url: width: image_size_2x }} 2x"
@@ -17,7 +17,7 @@
         height="{{ settings.image.height }}"
         style="max-width: min(100%, {{ settings.image_width }}px);"
       >
-    {%- endif -%}  
+   
       
       {%- if section.settings.ImageHeading!= blank-%}
         <p>{{section.settings.ImageHeading}}</p>
