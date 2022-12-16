@@ -108,8 +108,45 @@
     },
     "Brands": {
       "type": "Brands",
+      "blocks": {
+        "d0cde632-2e80-4b36-8978-a886a084e615": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "879e5529-ea59-4c3f-904e-024f5b468cf1": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "4c3ec5aa-bfaf-4239-bab7-95a857ca50db": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "1179b5b0-e7a0-4076-9d11-29192d4e3b44": {
+          "type": "image",
+          "settings": {
+            "image_width": 100,
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "d0cde632-2e80-4b36-8978-a886a084e615",
+        "879e5529-ea59-4c3f-904e-024f5b468cf1",
+        "4c3ec5aa-bfaf-4239-bab7-95a857ca50db",
+        "1179b5b0-e7a0-4076-9d11-29192d4e3b44"
+      ],
       "settings": {
-       
+        "brands_heading1": "OUR BRANDS",
+        "brands_heading2": "我們的品牌"
       }
     },
     "featured_collection": {
