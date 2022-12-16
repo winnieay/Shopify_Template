@@ -1,74 +1,66 @@
 <link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">
 
-
+<!--
 <div class="slider" id="slider" style="background: #F9F5F0 0% 0% no-repeat padding-box;height:400px;width:110%">
-  {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
-    <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}</h1>
-    <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
-  {%- endif -%}
+{%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
+<h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}</h1>
+<h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
+{%- endif -%}
 
-  {%- if section.blocks.size > 0 -%}
-    <div class=" slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
-      {%- for block in section.blocks -%} 
-          {%- case block.type -%}
-            {%- when 'image' -%}
-                {%- if block.settings.image != blank -%}
-                  {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                  <img class="item" srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" style="height:150px;width:auto;">
-                {%- else -%}
-                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-                {%- endif -%}
-          {%- endcase -%}
-      {%- endfor -%}
-    </div>
-  {%- endif -%}
-
-
-
-  <div class="slide" id="slide">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
-  </div>
-  <button class="ctrl-btn pro-prev">Prev</button>
-  <button class="ctrl-btn pro-next">Next</button>
+{%- if section.blocks.size > 0 -%}
+<div class=" slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+{%- for block in section.blocks -%} 
+{%- case block.type -%}
+{%- when 'image' -%}
+{%- if block.settings.image != blank -%}
+{%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+<img class="item" srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" style="height:150px;width:auto;">
+{%- else -%}
+{{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+{%- endif -%}
+{%- endcase -%}
+{%- endfor -%}
 </div>
+{%- endif -%}
 
-
-
-{% schema %}
-  {
+--><div class="slide" id="slide">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+</div>
+<button class="ctrl-btn pro-prev">Prev</button>
+<button class="ctrl-btn pro-next">Next</button></div>{% schema %}
+{
   "name": "Brands",
   "blocks": [
-     {
-        "type": "image",
-        "name": "Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }
-        ]
-      }
-    ],
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type": "text",
       "id": "brands_heading1",
       "label": "Heading1",
       "default": "OUR BRANDS"
-    },
-    {
+    }, {
       "type": "text",
       "id": "brands_heading2",
       "label": "Heading2",
@@ -81,74 +73,70 @@
     }
   ]
 }
-{% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
+{% endschema %}{% stylesheet %}
 
 {% javascript %}
 
 
 
-productScroll();
+  productScroll();
 
-function productScroll() {
-  let slider = document.getElementById("slider");
-  let next = document.getElementsByClassName("pro-next");
-  let prev = document.getElementsByClassName("pro-prev");
-  let slide = document.getElementById("slide");
-  let item = document.getElementById("slide");
+  function productScroll() {
+    let slider = document.getElementById("slider");
+    let next = document.getElementsByClassName("pro-next");
+    let prev = document.getElementsByClassName("pro-prev");
+    let slide = document.getElementById("slide");
+    let item = document.getElementById("slide");
 
-  for (let i = 0; i < next.length; i++) {
-    //refer elements by class name
+    for (let i = 0; i < next.length; i++) { // refer elements by class name
 
-    let position = 0; //slider postion
+      let position = 0; // slider postion
 
-    prev[i].addEventListener("click", function() {
-      //click previos button
-      if (position > 0) {
-        //avoid slide left beyond the first item
-        position -= 1;
-        translateX(position); //translate items
-      }
-    });
+      prev[i].addEventListener("click", function() {
 
-    next[i].addEventListener("click", function() {
-      if (position >= 0 && position < hiddenItems()) {
-        //avoid slide right beyond the last item
-        position += 1;
-        translateX(position); //translate items
-      }
-    });
-  }
+// click previos button
+        if (position > 0) { // avoid slide left beyond the first item
+          position -= 1;
+          translateX(position); // translate items
+        }
+      });
 
-  function hiddenItems() {
-    //get hidden items
-    let items = getCount(item, false);
-    let visibleItems = slider.offsetWidth / 210;
-    return items - Math.ceil(visibleItems);
-  }
-}
+      next[i].addEventListener("click", function() {
+        if (position >= 0 && position < hiddenItems()) { // avoid slide right beyond the last item
+          position += 1;
+          translateX(position); // translate items
+        }
+      });
+    }
 
-function translateX(position) {
-  //translate items
-  slide.style.left = position * -210 + "px";
-}
+    function hiddenItems() {
 
-function getCount(parent, getChildrensChildren) {
-  //count no of items
-  let relevantChildren = 0;
-  let children = parent.childNodes.length;
-  for (let i = 0; i < children; i++) {
-    if (parent.childNodes[i].nodeType != 3) {
-      if (getChildrensChildren)
-        relevantChildren += getCount(parent.childNodes[i], true);
-      relevantChildren++;
+// get hidden items
+      let items = getCount(item, false);
+      let visibleItems = slider.offsetWidth / 210;
+      return items - Math.ceil(visibleItems);
     }
   }
-  return relevantChildren;
-}
 
+  function translateX(position) {
 
+// translate items
+    slide.style.left = position * -210 + "px";
+  }
 
-{% endjavascript %}
+  function getCount(parent, getChildrensChildren) {
+
+// count no of items
+    let relevantChildren = 0;
+    let children = parent.childNodes.length;
+    for (let i = 0; i < children; i++) {
+      if (parent.childNodes[i].nodeType != 3) {
+        if (getChildrensChildren) 
+          relevantChildren += getCount(parent.childNodes[i], true);
+        
+        relevantChildren++;
+      }
+    }
+    return relevantChildren;
+  }
+{% endjavascript %}}
