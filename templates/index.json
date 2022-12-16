@@ -92,14 +92,12 @@
         "accessibility_info": "Slideshow"
       }
     },
-
     "marquee": {
       "type": "marquee",
       "settings": {
-        
+        "marquee": "歡迎光臨小豬集雜貨店（香港$480 \/ 澳門$700 \/ 台灣$1800順豐免運 ) Please contact us for worldwide shipping!"
       }
     },
-
     "news": {
       "type": "news",
       "settings": {
@@ -117,10 +115,20 @@
     "Brands": {
       "type": "Brands",
       "blocks": {
-        
+        "bea1eab3-557b-4b3b-957e-b22b0c25653f": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "4122f035-f3ca-462a-b71f-6001bae97d1c": {
+          "type": "image",
+          "settings": {
+          }
+        }
       },
       "block_order": [
-      
+        "bea1eab3-557b-4b3b-957e-b22b0c25653f",
+        "4122f035-f3ca-462a-b71f-6001bae97d1c"
       ],
       "settings": {
         "brands_heading1": "OUR BRANDS",
