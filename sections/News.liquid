@@ -8,7 +8,7 @@
     <p>testing1</p>
     {%- if section.settings.image -%}
       <p>testing2</p>
-      {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 5760 -%}
+      {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 500 -%}
       <img
         srcset= "{{section.settings.image | image_url: width:section.settings.image_width }}, {{section.settings.image | image_url: width: image_size_2x }} 2x"
         src="{{section.settings.image | image_url: width: 200}}"
