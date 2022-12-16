@@ -7,7 +7,7 @@
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}</h1>
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}</h1>
   {%- endif -%}
-
+<!--
   {%- if section.blocks.size > 0 -%}
     <div id="slider">
       {%- for block in section.blocks -%}
@@ -29,11 +29,11 @@
     <button class="ctrl-btn pro-prev">Prev</button>
     <button class="ctrl-btn pro-next">Next</button>
   {%- endif -%}
+-->
 
-<!--
 
   <div class="slide" id="slide">
-    <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+    {%- if section.blocks.size > 0 -%}<img class="item" src="http://via.placeholder.com/200x200?text=Product1">{%- endif -%}
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
@@ -48,7 +48,6 @@
   </div>
   <button class="ctrl-btn pro-prev">Prev</button>
   <button class="ctrl-btn pro-next">Next</button>
--->
 </div>
 
 
