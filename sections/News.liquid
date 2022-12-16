@@ -8,6 +8,7 @@
     <p>testing1</p>
     
       <p>testing2</p>
+      {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
       <img
         srcset= "{{settings.image | image_url: width:settings.image_width }}, {{settings.image | image_url: width: image_size_2x }} 2x"
         src="{{settings.image | image_url: width: 200}}"
