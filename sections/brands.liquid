@@ -3,6 +3,36 @@
 
 
 <div class="slider" id="slider">
+  {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
+    <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.news_heading1}}</h1>
+    <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.news_heading2}}</h1>
+  {%- endif -%}
+
+  <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+    {%- if section.blocks.size > 0 -%}
+    {%- for block in section.blocks -%}
+      <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+        {%- case block.type -%}
+          {%- when 'link_list' -%}
+            {%- if block.settings.menu != blank -%}
+              <ul class="footer-block__details-content list-unstyled" style="margin-bottom:40px;">
+                {%- for link in block.settings.menu.links -%}
+                  <dl style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;margin-top: 0px;margin-bottom:0px">
+                    <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}" style="color: #798672;font: normal normal normal 16px/24px Noto Sans TC Light;pading:0px 0px 0px 0px;text-decoration: none;">
+                      {{ link.title }}
+                    </a>
+                  </dl>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+        {%- endcase -%}
+      </div>
+    {%- endfor -%}
+    {%- endif -%}
+    <button class="ctrl-btn pro-prev">Prev</button>
+    <button class="ctrl-btn pro-next">Next</button>
+  </div>
+
   <div class="slide" id="slide">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
     <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
@@ -25,32 +55,57 @@
 {% schema %}
   {
   "name": "Brands",
+  "blocks": [
+     {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "range",
+            "id": "image_width",
+            "min": 50,
+            "max": 200,
+            "step": 5,
+            "unit": "px",
+            "label": "Image width",
+            "default": 100
+          }, {
+            "type": "select",
+            "id": "alignment",
+            "label": "Image alignment on large screen",
+            "options": [
+              {
+                "value": "",
+                "label": "Left"
+              }, {
+                "value": "center",
+                "label": "Center"
+              }, {
+                "value": "right",
+                "label": "Right"
+              }
+            ],
+            "default": "center"
+          }
+        ]
+      }
+    ],
   "settings": [
-    
-    
     {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
+      "type": "text",
+      "id": "brands_heading1",
+      "label": "Heading1",
+      "default": "OUR BRANDS"
     },
     {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "type": "text",
+      "id": "brands_heading2",
+      "label": "Heading2",
+      "default": "我們的品牌"
     }
   ],
   "presets": [
