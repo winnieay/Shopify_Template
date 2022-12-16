@@ -6,19 +6,19 @@
 
   <div style="display: inline;">
     <p>testing1</p>
-    
+    {%- if section.settings.image -%}
       <p>testing2</p>
-      {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+      {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 5760 -%}
       <img
-        srcset= "{{settings.image | image_url: width:settings.image_width }}, {{settings.image | image_url: width: image_size_2x }} 2x"
-        src="{{settings.image | image_url: width: 200}}"
-        alt="{{settings.image.alt | escape }}"
+        srcset= "{{section.settings.image | image_url: width:section.settings.image_width }}, {{section.settings.image | image_url: width: image_size_2x }} 2x"
+        src="{{section.settings.image | image_url: width: 200}}"
+        alt="{{section.settings.image.alt | escape }}"
         loading="lazy"
-        width="{{ settings.image.width }}"
-        height="{{ settings.image.height }}"
-        style="max-width: min(100%, {{ settings.image_width }}px);"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        style="max-width: min(100%, {{ section.settings.image_width }}px);"
       >
-   
+      {%- endif -%}
       
       {%- if section.settings.ImageHeading!= blank-%}
         <p>{{section.settings.ImageHeading}}</p>
