@@ -1,60 +1,29 @@
-"use strict";
+console.log("this sfakdfzkjmns");
+  var button = document.getElementById('next');
+  button.onclick = function() {
+    console.log('GO RIGHT');
+    var container = document.getElementById('slider');
+    sideScroll(container, 'right', 25, 100, 10);
+  };
 
-productScroll();
+  var back = document.getElementById('pre');
+  back.onclick = function() {
+    console.log('GO LEFT');
+    var container = document.getElementById('slider');
+    sideScroll(container, 'left', 25, 100, 10);
+  };
 
-function productScroll() {
-  let slider = document.getElementById("slider");
-  let next = document.getElementsByClassName("pro-next");
-  let prev = document.getElementsByClassName("pro-prev");
-  let slide = document.getElementById("slide");
-  let item = document.getElementById("slide");
-
-  for (let i = 0; i < next.length; i++) {
-    //refer elements by class name
-
-    let position = 0; //slider postion
-
-    prev[i].addEventListener("click", function() {
-      //click previos button
-      if (position > 0) {
-        //avoid slide left beyond the first item
-        position -= 1;
-        translateX(position); //translate items
+  function sideScroll(element, direction, speed, distance, step) {
+    scrollAmount = 0;
+    var slideTimer = setInterval(function() {
+      if (direction == 'left') {
+        element.scrollLeft -= step;
+      } else {
+        element.scrollLeft += step;
       }
-    });
-
-    next[i].addEventListener("click", function() {
-      if (position >= 0 && position < hiddenItems()) {
-        //avoid slide right beyond the last item
-        position += 1;
-        translateX(position); //translate items
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
       }
-    });
+    }, speed);
   }
-
-  function hiddenItems() {
-    //get hidden items
-    let items = getCount(item, false);
-    let visibleItems = slider.offsetWidth / 210;
-    return items - Math.ceil(visibleItems);
-  }
-}
-
-function translateX(position) {
-  //translate items
-  slide.style.left = position * -210 + "px";
-}
-
-function getCount(parent, getChildrensChildren) {
-  //count no of items
-  let relevantChildren = 0;
-  let children = parent.childNodes.length;
-  for (let i = 0; i < children; i++) {
-    if (parent.childNodes[i].nodeType != 3) {
-      if (getChildrensChildren)
-        relevantChildren += getCount(parent.childNodes[i], true);
-      relevantChildren++;
-    }
-  }
-  return relevantChildren;
-}
