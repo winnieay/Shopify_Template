@@ -53,10 +53,10 @@
                   <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   {%- if section.settings.news_text!= blank-%}
-                  <p>{{section.settings.news_text}}</p>
+                  <h2>{{section.settings.news_text}}</h2>
                   {%- endif -%}
                   {%- if section.settings.news_date!= blank-%}
-                  <p>{{section.settings.news_date}}</p>
+                  <h2>{{section.settings.news_date}}</h2>
                   {%- endif -%}
                 </div>
               {%- else -%}
