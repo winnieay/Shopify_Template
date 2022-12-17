@@ -5,7 +5,7 @@
     sideScroll(container, 'right', 25, 200, 20);
   };
 
-  var back = document.getElementById('mews_pre');
+  var back = document.getElementById('news_pre');
   back.onclick = function() {
     console.log('GO LEFT');
     var container = document.getElementById('news_slider');
