@@ -1,7 +1,7 @@
 .news_bon {
     border: none;
     position: absolute;
-    top: 70%;
+    top: 64%;
     font-size: 23px;
     font-weight: 200;
     left: 2%;
@@ -11,10 +11,12 @@
   .news_bon:nth-of-type(2) {
     left: 95%;
     text-align: right;
+    top: 64%;
+
   }
   .news_section {
     top: 50%;
-    width: 79%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: left;
