@@ -35,12 +35,59 @@
     {%- endif -%} 
   </div>
 
-  
+  <button id="pre" class="span_img">&#139;</button>
+  <button id="next" class="span_img">&#155;</button>
+  <section id="slider" class="section_img">
+    {%- if section.blocks.size > 0 -%}
+      <div class="div_img">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'image' -%}
+              {%- if block.settings.image != blank -%}
+                {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                <img src="{{ block.settings.image | image_url: width: 100}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </section>
+
+
+
 
 </div>
 {% schema %}
   {
     "name": "News",
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+            "type": "text",
+            "id": "news_heading",
+            "default": "Image Heading",
+            "label": "Heading"
+      },
+      {
+            "type": "text",
+            "id": "news_date",
+            "default": "21 May, 2022",
+            "label": "Date"
+      }
+    ],
     "settings": [
     {
       "type": "text",
