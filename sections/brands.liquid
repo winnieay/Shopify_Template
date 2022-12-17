@@ -7,9 +7,9 @@
     <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}
     </h1>
   {%- endif -%}
-  <span class="span_img">&#139;</span>
-  <span class="span_img">&#155;</span>
-  <section class="section_img">
+  <span id="pre" class="span_img">&#139;</span>
+  <span id="next" class="span_img">&#155;</span>
+  <section id="slider" class="section_img">
     {%- if section.blocks.size > 0 -%}
       <div class="div_img">
         {%- for block in section.blocks -%}
@@ -70,16 +70,15 @@
 
   .span_img {
     position: absolute;
-    top: 40%;
-    font-size: 60px;
-    font-weight: bold;
-    color: purple;
+    top: 65%;
+    font-size: 50px;
+    font-weight: 200;
     cursor: pointer;
-    left: .5%;
+    left: 2%;
     z-index: 1;
   }
   .span_img:nth-of-type(2) {
-    left: 98%;
+    left: 96%;
     text-align: right;
   }
   .section_img {
@@ -110,30 +109,31 @@
 {% endstylesheet %}
 
 {% javascript %}
-  var span_img = document.getElementByTagName('span_img');
-  var div_img = document.getElementByClassName('div_img');
-  var l = 0;
-  span_img[1].onlick = () => {
-    l++;
-    for (var i of div_img) {
-      if (l == 0) {
-        i.style.left = "0px";
+
+  var button = document.getElementById('next');
+  button.onclick = function() {
+    var container = document.getElementById('slider');
+    sideScroll(container, 'right', 25, 100, 10);
+  };
+
+  var back = document.getElementById('pre');
+  back.onclick = function() {
+    var container = document.getElementById('slider');
+    sideScroll(container, 'left', 25, 100, 10);
+  };
+
+  function sideScroll(element, direction, speed, distance, step) {
+    scrollAmount = 0;
+    var slideTimer = setInterval(function() {
+      if (direction == 'left') {
+        element.scrollLeft -= step;
+      } else {
+        element.scrollLeft += step;
       }
-      if (l == 1) {
-        i.style.left = "-720px";
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
       }
-      if (l == 2) {
-        i.style.left = "-1480px";
-      }
-      if (l == 3) {
-        i.style.left = "-2220px";
-      }
-      if (l == 4) {
-        i.style.left = "-2960px";
-      }
-      if (l > 4) {
-        l = 4;
-      }
-    }
+    }, speed);
   }
 {% endjavascript %}}
