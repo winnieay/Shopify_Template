@@ -138,70 +138,30 @@
 {% endstylesheet %}
 
 {% javascript %}
-
-  "use strict";
-
-  productScroll();
-
-  function productScroll() {
-    let slider = document.getElementById("slider");
-    let next = document.getElementsByClassName("pro-next");
-    let prev = document.getElementsByClassName("pro-prev");
-    let slide = document.getElementById("slide");
-    let item = document.getElementById("slide");
-
-    for (let i = 0; i < next.length; i++) { // refer elements by class name
-
-      let position = 0; // slider postion
-
-      prev[i].addEventListener("click", function() {
-
-// click previos button
-        if (position > 0) { // avoid slide left beyond the first item
-          position -= 1;
-          translateX(position); // translate items
-        }
-      });
-
-      next[i].addEventListener("click", function() {
-        if (position >= 0 && position < hiddenItems()) { // avoid slide right beyond the last item
-          position += 1;
-          translateX(position); // translate items
-        }
-      });
-    }
-
-    function hiddenItems() {
-
-// get hidden items
-      let items = getCount(item, false);
-      let visibleItems = slider.offsetWidth / 210;
-      return items - Math.ceil(visibleItems);
-    }
-  }
-
-  function translateX(position) {
-
-// translate items
-    slide.style.left = position * -210 + "px";
-  }
-
-  function getCount(parent, getChildrensChildren) {
-
-// count no of items
-    let relevantChildren = 0;
-    let children = parent.childNodes.length;
-    for (let i = 0; i < children; i++) {
-      if (parent.childNodes[i].nodeType != 3) {
-        if (getChildrensChildren) 
-          relevantChildren += getCount(parent.childNodes[i], true);
-        
-
-
-
-        relevantChildren++;
+  var span = document.getElementByTagName('span');
+  var div_img = document.getElementByClassName('div_img');
+  var l = 0;
+  span[1].onlick = () => {
+    l++;
+    for (var i of div_img) {
+      if (l == 0) {
+        i.style.left = "0px";
+      }
+      if (l == 1) {
+        i.style.left = "-720px";
+      }
+      if (l == 2) {
+        i.style.left = "-1480px";
+      }
+      if (l == 3) {
+        i.style.left = "-2220px";
+      }
+      if (l == 4) {
+        i.style.left = "-2960px";
+      }
+      if (l > 4) {
+        l = 4;
       }
     }
-    return relevantChildren;
   }
-{% endjavascript %}}}}}
+{% endjavascript %}}
