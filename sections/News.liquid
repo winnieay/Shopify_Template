@@ -51,11 +51,10 @@
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
                 <div class="news_div" style="padding:0px;margin:0px;">
                   <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                
-                  <h2>{{section.settings.news_text| escape}}</h2>
-                  <h2>{{section.settings.news_date| escape}}</h2>
+                  <p>{{section.settings.news_text}}</p>
+                  <p>{{section.settings.news_date}}</p>
                 </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
                 {{ 'news_image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
@@ -88,13 +87,13 @@
             "id": "news_text",
             "default": "Image Text",
             "label": "Text"
-      },
-      {
+          },
+          {
             "type": "text",
             "id": "news_date",
             "default": "21 May, 2022",
             "label": "Date"
-      }
+          }
         ]
       }
     ],
