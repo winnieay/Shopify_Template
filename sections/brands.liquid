@@ -17,7 +17,7 @@
             {%- when 'image' -%}
               {%- if block.settings.image != blank -%}
                 {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                <img class="div_img" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="height:150px;width:auto;">
+                <img class="div_img" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
@@ -135,4 +135,4 @@
       }
     }
   }
-{% endjavascript %}}}}}}}}
+{% endjavascript %}}}}}}}}}
