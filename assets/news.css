@@ -1,4 +1,5 @@
 .news_bon {
+    background: none;
     border: none;
     position: absolute;
     top: 64%;
@@ -15,7 +16,7 @@
   }
   .news_section {
     top: 50%;
-    width: 90%;
+    width: 93%;
     margin: auto;
     display: flex;
     justify-content: left;
@@ -26,7 +27,7 @@
     visibility: hidden;
   }
   .news_div {
-    margin: 120px 0px 0px 0px;
+    margin: 100px 0px 0px 0px;
     position: relative;
     left: 0;
     text-align: center;
