@@ -3,14 +3,14 @@ console.log("this sfakdfzkjmns");
   button.onclick = function() {
     console.log('GO RIGHT');
     var container = document.getElementById('slider');
-    sideScroll(container, 'right', 25, 200, 10);
+    sideScroll(container, 'right', 25, 200, 20);
   };
 
   var back = document.getElementById('pre');
   back.onclick = function() {
     console.log('GO LEFT');
     var container = document.getElementById('slider');
-    sideScroll(container, 'left', 25, 100, 20);
+    sideScroll(container, 'left', 25, 200, 20);
   };
 
   function sideScroll(element, direction, speed, distance, step) {
