@@ -49,8 +49,16 @@
             {%- when 'image' -%}
               {%- if block.settings.news_image != blank -%}
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
+                <div>
                 <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {%- if section.settings.news_text!= blank-%}
+                <p>{{section.settings.news_text}}</p>
+                {%- endif -%}
+                {%- if section.settings.news_date!= blank-%}
+                <p>{{section.settings.news_date}}</p>
+                {%- endif -%}
+                </div>
               {%- else -%}
                 {{ 'news_image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
@@ -80,9 +88,9 @@
           },
           {
             "type": "text",
-            "id": "news_heading",
-            "default": "Image Heading",
-            "label": "Heading"
+            "id": "news_text",
+            "default": "Image Text",
+            "label": "Text"
       },
       {
             "type": "text",
