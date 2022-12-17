@@ -12,7 +12,7 @@
     left: 95%;
     text-align: right;
   }
-  .section_img {
+  .news_section {
     top: 50%;
     width: 79%;
     margin: auto;
@@ -21,10 +21,10 @@
     overflow-x: scroll;
     white-space: nowrap;
   }
-  .section_img::-webkit-scrollbar {
+  .news_section::-webkit-scrollbar {
     visibility: hidden;
   }
-  .div_img {
+  .news_div {
     margin: 20px;
     position: relative;
     left: 0;
