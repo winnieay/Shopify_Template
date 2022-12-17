@@ -1,13 +1,53 @@
-<link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">
+<!--<link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">-->
 
-<div class="slider" id="slider" style="background: #F9F5F0 0% 0% no-repeat padding-box;height:400px;width:110%">
+<div style="background: #F9F5F0 0% 0% no-repeat padding-box;height:400px;width:110%">
   {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
     <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}
     </h1>
     <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}
     </h1>
   {%- endif -%}
-</div>
+  <span>&#139;</span>
+  <span>&#155;</span>
+  <section>
+    {%- if section.blocks.size > 0 -%}
+      <div class="div_img slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'image' -%}
+              {%- if block.settings.image != blank -%}
+                {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                <img class="item" srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="height:150px;width:auto;">
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </section>
+
+  <!--
+  <div class="slider" id="slider">
+  <div class="slide" id="slide">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product2">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  <img class="item" src="http://via.placeholder.com/200x200?text=Product3">
+  </div>
+  <button class="ctrl-btn pro-prev">Prev</button>
+  <button class="ctrl-btn pro-next">Next</button>
+  </div>
+  --></div>
+
 {% schema %}
   {
     "name": "brands",
@@ -45,7 +85,57 @@
   }
 {% endschema%}
 
-
+{% stylesheet %}
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  main {
+    width;100%;
+    height: 400px;
+    margin: 200px auto;
+    overflow: hidden;
+    position: relative;
+  }
+  span {
+    position: absolute;
+    top: 40%;
+    font-size: 60px;
+    font-weight: bold;
+    color: purple;
+    cursor: pointer;
+    left: .5%;
+    z-index: 1;
+  }
+  span:nth-of-type(2) {
+    left: 98%;
+    text-align: right;
+  }
+  section {
+    width: 98%;
+    height: 300px;
+    background: #f4f4f4;
+    margin: 10px auto;
+    display: flex;
+    justify-content: left;
+    overflow-x: auto;
+  }
+  section::-webkit-scrollbar {
+    visibility: hidden;
+  }
+  .div_img {
+    min-width: 250px;
+    height: 200px;
+    position: relative;
+    left: 0;
+    text-align: center;
+    padding-top: 60px;
+    margin: 10px 20px;
+    color: white;
+    background: purple;
+    transition: 0.5s;
+  }
+{% endstylesheet %}
 
 {% javascript %}
 
@@ -114,4 +204,4 @@
     }
     return relevantChildren;
   }
-{% endjavascript %}
+{% endjavascript %}}}}}
