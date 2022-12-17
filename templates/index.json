@@ -150,6 +150,18 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/hand-with-two-fingers-up-peace.jpg"
           }
+        },
+        "01157313-0e2e-42c2-a946-278804c38d8e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-one-up.jpg"
+          }
+        },
+        "b500707d-030f-48d9-ac4b-d1389af82788": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-three-fingers-up.jpg"
+          }
         }
       },
       "block_order": [
@@ -158,7 +170,9 @@
         "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e",
         "f7258812-944c-4185-92dd-ee35d877a62d",
         "73c9948a-4434-4a2a-af1d-682dd6b0ba55",
-        "201cef3a-f783-4bbf-bb78-19b7ef43fc44"
+        "201cef3a-f783-4bbf-bb78-19b7ef43fc44",
+        "01157313-0e2e-42c2-a946-278804c38d8e",
+        "b500707d-030f-48d9-ac4b-d1389af82788"
       ],
       "settings": {
         "brands_heading1": "OUR BRANDS",
