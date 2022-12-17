@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="{{ 'news.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{'news.js'|asset_url}}" defer="defer"></script>
+
+
 <div style="width:100%;height:1200px;padding-left:50px;padding-bottom:50px;background: #EDE7DB 0% 0% no-repeat padding-box;" >
   {%- if section.settings.news_heading1!= blank or section.settings.news_heading2!= blank-%}
     <h1 style="width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.news_heading1}}</h1>
@@ -35,20 +39,20 @@
     {%- endif -%} 
   </div>
 
-  <button id="pre" class="span_img">&#139;</button>
-  <button id="next" class="span_img">&#155;</button>
-  <section id="slider" class="section_img">
+  <button id="news_pre" class="news_bon">&#139;</button>
+  <button id="news_next" class="news-bon">&#155;</button>
+  <section id="news_slider" class="news_section">
     {%- if section.blocks.size > 0 -%}
-      <div class="div_img">
+      <div class="news_div">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
-            {%- when 'image' -%}
+            {%- when 'news_image' -%}
               {%- if block.settings.news_image != blank -%}
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
                 <img src="{{ block.settings.news_image | image_url: width: 300}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
-                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                {{ 'news_image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
           {%- endcase -%}
         {%- endfor -%}
@@ -160,42 +164,7 @@
 {% endschema %}
 
 {% stylesheet %}
-.span_img {
-    border: none;
-    background: red;
-    position: absolute;
-    top: 70%;
-    font-size: 23px;
-    font-weight: 200;
-    left: 2%;
-    z-index: 1;
-    color: #858181;
-  }
-  .span_img:nth-of-type(2) {
-    left: 95%;
-    text-align: right;
-  }
-  .section_img {
-    top: 50%;
-    width: 79%;
-    margin: auto;
-    display: flex;
-    justify-content: left;
-    overflow-x: scroll;
-    white-space: nowrap;
-  }
-  .section_img::-webkit-scrollbar {
-    visibility: hidden;
-  }
-  .div_img {
-    margin: 20px;
-    position: relative;
-    left: 0;
-    text-align: center;
-    transition: 0.5s;
-    display: inline-block;
 
-  }
 {% endstylesheet %}
 
 {% javascript %}
