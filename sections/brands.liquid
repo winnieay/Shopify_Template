@@ -1,23 +1,23 @@
 <!--<link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">-->
 
-<div style="background: #F9F5F0 0% 0% no-repeat padding-box;height:400px;width:110%">
+<div style="background: #F9F5F0;width;100%;height: 400px;margin: 200px auto;overflow: hidden;position: relative;">
   {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
     <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.brands_heading1}}
     </h1>
     <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}
     </h1>
   {%- endif -%}
-  <span>&#139;</span>
-  <span>&#155;</span>
-  <section>
+  <span class="span_img">&#139;</span>
+  <span class="span_img">&#155;</span>
+  <section class="section_img">
     {%- if section.blocks.size > 0 -%}
-      <div class="div_img slider footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
+      <div class="div_img">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'image' -%}
               {%- if block.settings.image != blank -%}
                 {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                <img class="item" srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="height:150px;width:auto;">
+                <img srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="height:150px;width:auto;">
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
@@ -90,14 +90,8 @@
     padding: 0;
     margin: 0;
   }
-  main {
-    width;100%;
-    height: 400px;
-    margin: 200px auto;
-    overflow: hidden;
-    position: relative;
-  }
-  span {
+
+  .span_img {
     position: absolute;
     top: 40%;
     font-size: 60px;
@@ -107,11 +101,11 @@
     left: .5%;
     z-index: 1;
   }
-  span:nth-of-type(2) {
+  .span_img:nth-of-type(2) {
     left: 98%;
     text-align: right;
   }
-  section {
+  .section_img {
     width: 98%;
     height: 300px;
     background: #f4f4f4;
@@ -138,10 +132,10 @@
 {% endstylesheet %}
 
 {% javascript %}
-  var span = document.getElementByTagName('span');
+  var span_img = document.getElementByTagName('span_img');
   var div_img = document.getElementByClassName('div_img');
   var l = 0;
-  span[1].onlick = () => {
+  span_img[1].onlick = () => {
     l++;
     for (var i of div_img) {
       if (l == 0) {
