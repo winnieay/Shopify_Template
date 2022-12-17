@@ -105,7 +105,7 @@
           "type": "image",
           "settings": {
             "news_image": "shopify:\/\/shop_images\/makeup-brushes.jpg",
-            "news_heading": "Image Heading",
+            "news_text": "Image Text",
             "news_date": "21 May, 2022"
           }
         },
@@ -113,7 +113,7 @@
           "type": "image",
           "settings": {
             "news_image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg",
-            "news_heading": "Image Heading",
+            "news_text": "Image Text",
             "news_date": "21 May, 2022"
           }
         },
@@ -121,7 +121,15 @@
           "type": "image",
           "settings": {
             "news_image": "shopify:\/\/shop_images\/bright-eye-makeup-brushes.jpg",
-            "news_heading": "Image Heading",
+            "news_text": "Image Text",
+            "news_date": "21 May, 2022"
+          }
+        },
+        "982324c1-551d-4830-9233-f09c21958996": {
+          "type": "image",
+          "settings": {
+            "news_image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "news_text": "thajsdb",
             "news_date": "21 May, 2022"
           }
         }
@@ -129,7 +137,8 @@
       "block_order": [
         "ce603dc6-d2dc-47ea-8775-0e8e0a79a320",
         "5b9523eb-33a0-4d3a-bf53-d2904804fb0e",
-        "33826a2d-98c7-4816-807b-97b703350290"
+        "33826a2d-98c7-4816-807b-97b703350290",
+        "982324c1-551d-4830-9233-f09c21958996"
       ],
       "settings": {
         "news_heading1": "NEWS",
