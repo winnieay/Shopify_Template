@@ -1,4 +1,5 @@
 <!--<link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">-->
+<script src="{{'brands.js'|asset_url}}" defer="defer"></script>
 
 <div style="background: #F9F5F0;width:100%;height: 400px;margin:200px auto;overflow: hidden;position: relative;margin:0px;">
   {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}
@@ -107,36 +108,3 @@
     display: inline-block;
   }
 {% endstylesheet %}
-
-{% javascript %}
-
-  console.log("this sfakdfzkjmns");
-  var button = document.getElementById('next');
-  button.onclick = function() {
-    console.log('GO RIGHT');
-    var container = document.getElementById('slider');
-    sideScroll(container, 'right', 25, 100, 10);
-  };
-
-  var back = document.getElementById('pre');
-  back.onclick = function() {
-    console.log('GO LEFT');
-    var container = document.getElementById('slider');
-    sideScroll(container, 'left', 25, 100, 10);
-  };
-
-  function sideScroll(element, direction, speed, distance, step) {
-    scrollAmount = 0;
-    var slideTimer = setInterval(function() {
-      if (direction == 'left') {
-        element.scrollLeft -= step;
-      } else {
-        element.scrollLeft += step;
-      }
-      scrollAmount += step;
-      if (scrollAmount >= distance) {
-        window.clearInterval(slideTimer);
-      }
-    }, speed);
-  }
-{% endjavascript %}}}}}}}}
