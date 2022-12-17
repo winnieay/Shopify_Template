@@ -267,25 +267,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "167123995715672f7d": {
-      "type": "apps",
-      "disabled": true,
-      "blocks": {
-        "e03aa8e1-bf32-4fbb-97a1-c7c3ebb253e7": {
-          "type": "shopify:\/\/apps\/common-ninja-logo-showcase\/blocks\/app-block\/7d6c9f6f-c0be-4336-8178-bfe5d6b647f3",
-          "settings": {
-            "isVisible": true,
-            "appId": "c4a15816-15d2-4998-aaf6-c9afa41ba7d1"
-          }
-        }
-      },
-      "block_order": [
-        "e03aa8e1-bf32-4fbb-97a1-c7c3ebb253e7"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -294,7 +275,6 @@
     "news",
     "Brands",
     "featured_collection",
-    "multicolumn",
-    "167123995715672f7d"
+    "multicolumn"
   ]
 }
