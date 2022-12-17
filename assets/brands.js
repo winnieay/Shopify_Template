@@ -10,7 +10,7 @@ console.log("this sfakdfzkjmns");
   back.onclick = function() {
     console.log('GO LEFT');
     var container = document.getElementById('slider');
-    sideScroll(container, 'left', 25, 200, 10);
+    sideScroll(container, 'left', 25, 100, 20);
   };
 
   function sideScroll(element, direction, speed, distance, step) {
