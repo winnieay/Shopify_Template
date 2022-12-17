@@ -43,9 +43,9 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'image' -%}
-              {%- if block.settings.image != blank -%}
-                {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                <img src="{{ block.settings.image | image_url: width: 100}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
+              {%- if block.settings.news_image != blank -%}
+                {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
+                <img src="{{ block.settings.news_image | image_url: width: 300}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -70,7 +70,7 @@
         "settings": [
           {
             "type": "image_picker",
-            "id": "image",
+            "id": "news_image",
             "label": "Image"
           }
         ]
@@ -160,6 +160,41 @@
 {% endschema %}
 
 {% stylesheet %}
+.span_img {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 70%;
+    font-size: 23px;
+    font-weight: 200;
+    left: 2%;
+    z-index: 1;
+    color: #858181;
+  }
+  .span_img:nth-of-type(2) {
+    left: 95%;
+    text-align: right;
+  }
+  .section_img {
+    width: 79%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  .section_img::-webkit-scrollbar {
+    visibility: hidden;
+  }
+  .div_img {
+    margin: 20px;
+    position: relative;
+    left: 0;
+    text-align: center;
+    transition: 0.5s;
+    display: inline-block;
+
+  }
 {% endstylesheet %}
 
 {% javascript %}
