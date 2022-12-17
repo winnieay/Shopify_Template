@@ -115,18 +115,6 @@
     "Brands": {
       "type": "Brands",
       "blocks": {
-        "147b3a9a-6b36-461f-8182-810c92dedf96": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/4.png"
-          }
-        },
-        "8d3b0bca-2a23-439b-90b8-d8ca856638ef": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9.png"
-          }
-        },
         "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e": {
           "type": "image",
           "settings": {
@@ -143,12 +131,6 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/7.png"
-          }
-        },
-        "201cef3a-f783-4bbf-bb78-19b7ef43fc44": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2.png"
           }
         },
         "b500707d-030f-48d9-ac4b-d1389af82788": {
@@ -169,31 +151,35 @@
             "image": "shopify:\/\/shop_images\/3.png"
           }
         },
-        "b33f235e-7148-48fa-a451-63eab321479b": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/9.png"
-          }
-        },
         "11182dcf-fe0b-4e5a-8584-1fb173d93080": {
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/10.png"
           }
+        },
+        "c68a20cc-9e06-47b4-8299-bc48cd3a6c1a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3.png"
+          }
+        },
+        "c84585e1-e5e3-421f-92bf-b40ac3669288": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7.png"
+          }
         }
       },
       "block_order": [
-        "147b3a9a-6b36-461f-8182-810c92dedf96",
-        "8d3b0bca-2a23-439b-90b8-d8ca856638ef",
         "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e",
         "f7258812-944c-4185-92dd-ee35d877a62d",
         "73c9948a-4434-4a2a-af1d-682dd6b0ba55",
-        "201cef3a-f783-4bbf-bb78-19b7ef43fc44",
         "b500707d-030f-48d9-ac4b-d1389af82788",
         "c05a33cd-261d-433c-bc48-77e3873340ce",
         "2a261aaf-00d7-4ec1-8abe-96a10953c8f3",
-        "b33f235e-7148-48fa-a451-63eab321479b",
-        "11182dcf-fe0b-4e5a-8584-1fb173d93080"
+        "11182dcf-fe0b-4e5a-8584-1fb173d93080",
+        "c68a20cc-9e06-47b4-8299-bc48cd3a6c1a",
+        "c84585e1-e5e3-421f-92bf-b40ac3669288"
       ],
       "settings": {
         "brands_heading1": "OUR BRANDS",
