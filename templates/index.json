@@ -114,6 +114,52 @@
     },
     "Brands": {
       "type": "Brands",
+      "blocks": {
+        "147b3a9a-6b36-461f-8182-810c92dedf96": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
+          }
+        },
+        "8d3b0bca-2a23-439b-90b8-d8ca856638ef": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg"
+          }
+        },
+        "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bright-eye-makeup-brushes.jpg"
+          }
+        },
+        "f7258812-944c-4185-92dd-ee35d877a62d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg"
+          }
+        },
+        "73c9948a-4434-4a2a-af1d-682dd6b0ba55": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-brushes.jpg"
+          }
+        },
+        "201cef3a-f783-4bbf-bb78-19b7ef43fc44": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/hand-with-two-fingers-up-peace.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "147b3a9a-6b36-461f-8182-810c92dedf96",
+        "8d3b0bca-2a23-439b-90b8-d8ca856638ef",
+        "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e",
+        "f7258812-944c-4185-92dd-ee35d877a62d",
+        "73c9948a-4434-4a2a-af1d-682dd6b0ba55",
+        "201cef3a-f783-4bbf-bb78-19b7ef43fc44"
+      ],
       "settings": {
         "brands_heading1": "OUR BRANDS",
         "brands_heading2": "我們的品牌"
@@ -203,6 +249,7 @@
     },
     "167123995715672f7d": {
       "type": "apps",
+      "disabled": true,
       "blocks": {
         "e03aa8e1-bf32-4fbb-97a1-c7c3ebb253e7": {
           "type": "shopify:\/\/apps\/common-ninja-logo-showcase\/blocks\/app-block\/7d6c9f6f-c0be-4336-8178-bfe5d6b647f3",
