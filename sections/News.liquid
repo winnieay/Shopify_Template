@@ -51,9 +51,9 @@
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
                 <div class="news_div" style="padding:0px;margin:0px;">
                   <p></p><img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
-                  {{section.settings.news_text}}
+                  {{section.settings.news_t}}
                 </p>
-                  <p>{{section.settings.news_date}}</p>
+                  <p>{{section.settings.news_d}}</p>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
@@ -85,13 +85,13 @@
           },
           {
             "type": "text",
-            "id": "news_text",
+            "id": "news_t",
             "default": "Image Text",
             "label": "Text"
           },
           {
             "type": "text",
-            "id": "news_date",
+            "id": "news_d",
             "default": "21 May, 2022",
             "label": "Date"
           }
