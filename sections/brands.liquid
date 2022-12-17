@@ -11,13 +11,13 @@
   <span class="span_img">&#155;</span>
   <section class="section_img">
     {%- if section.blocks.size > 0 -%}
-      <div>
+      <div class="div_img">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'image' -%}
               {%- if block.settings.image != blank -%}
                 {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                <img class="div_img" src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
+                <img src="{{ block.settings.image | image_url: width: 200}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy">
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
               {%- endif -%}
@@ -135,4 +135,4 @@
       }
     }
   }
-{% endjavascript %}}
+{% endjavascript %}}}
