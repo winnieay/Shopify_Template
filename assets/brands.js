@@ -18,8 +18,10 @@ console.log("this sfakdfzkjmns");
     var slideTimer = setInterval(function() {
       if (direction == 'left') {
         element.scrollLeft -= step;
+        console.log('a');
       } else {
         element.scrollLeft += step;
+        console.log('b');
       }
       scrollAmount += step;
       if (scrollAmount >= distance) {
