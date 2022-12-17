@@ -18,7 +18,7 @@
             {%- when 'image' -%}
               {%- if block.settings.image != blank -%}
                 {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
-                <img src="{{ block.settings.image | image_url: width: 150}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
+                <img src="{{ block.settings.image | image_url: width: 100}}" alt="{{ block.settings.image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
@@ -74,7 +74,7 @@
     border: none;
     background: none;
     position: absolute;
-    top: 60%;
+    top: 63%;
     font-size: 23px;
     font-weight: 200;
     left: 2%;
