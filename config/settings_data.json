@@ -232,7 +232,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "14420852018308771292": {
+        "type": "shopify:\/\/apps\/common-ninja-logo-showcase\/blocks\/app-embed-block\/7d6c9f6f-c0be-4336-8178-bfe5d6b647f3",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
