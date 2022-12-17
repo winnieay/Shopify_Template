@@ -10,9 +10,9 @@
   {%- endif -%}
   <button id="pre" class="span_img">&#139;</button>
   <button id="next" class="span_img">&#155;</button>
-  <section class="section_img">
+  <section id="slider" class="section_img">
     {%- if section.blocks.size > 0 -%}
-      <div id="slider" class="div_img">
+      <div class="div_img">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'image' -%}
