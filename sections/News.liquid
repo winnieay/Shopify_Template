@@ -53,8 +53,8 @@
                   <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 
-                  <h2>{{section.settings.news_text}}</h2>
-                  <h2>{{section.settings.news_date}}</h2>
+                  <h2>{{section.settings.news_text| escape}}</h2>
+                  <h2>{{section.settings.news_date| escape}}</h2>
                 </div>
               {%- else -%}
                 {{ 'news_image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
