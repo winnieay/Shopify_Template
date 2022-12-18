@@ -119,7 +119,6 @@ slideshow-component .slideshow.banner {
 }
 
 .slideshow__controls--top {
-  order: 2;
   z-index: 1;
 }
 
