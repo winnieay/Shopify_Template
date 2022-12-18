@@ -72,11 +72,13 @@
       </div>
     </noscript>
   {%- endif -%}
+  <div style="position:relative;" id="slideshow_bon" class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+    <button type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+    </button>
+    <button type="button" class="next slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+    </button>
+  </div>
 
-  <button id="slideshow_bon" type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-  </button>
-  <button id="slideshow_bon" type="button" class="next slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-  </button>
 
 
   <script>
@@ -99,11 +101,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                                   loading: 'lazy',
-                                   height: height,
-                                   sizes: "100vw",
-                                   widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                                 }}
+                                    loading: 'lazy',
+                                    height: height,
+                                    sizes: "100vw",
+                                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                                  }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
