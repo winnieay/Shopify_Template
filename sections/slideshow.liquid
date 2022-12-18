@@ -25,11 +25,7 @@
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
-    <script>
-      var h = window.innerHeight * 0.8;
-      console.log("screen height: " + window.innerHeight);
-      document.getElementById("slideshow_dot").style.top = h.toString() + "px";
-    </script>
+
 
     <div style="position:relative;" id="slideshow_dot" class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
@@ -73,6 +69,12 @@
     </noscript>
   {%- endif -%}
 
+  <script>
+    var h = window.innerHeight * 0.8;
+    console.log("screen height: " + window.innerHeight);
+    document.getElementById("slideshow_dot").style.top = h.toString() + "px";
+  </script>
+
   <div class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
       <style>
@@ -85,11 +87,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                              loading: 'lazy',
-                              height: height,
-                              sizes: "100vw",
-                              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                            }}
+                               loading: 'lazy',
+                               height: height,
+                               sizes: "100vw",
+                               widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                             }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
