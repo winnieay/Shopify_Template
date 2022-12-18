@@ -73,9 +73,9 @@
     </noscript>
   {%- endif -%}
 
-  <button id="slider_bon" type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+  <button id="slideshow_bon" type="button" class="prev slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
   </button>
-  <button id="slider_bon" type="button" class="next slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+  <button id="slideshow_bon" type="button" class="next slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
   </button>
 
 
@@ -83,6 +83,8 @@
     var h = window.innerHeight * 0.8;
     console.log("screen height: " + window.innerHeight);
     document.getElementById("slideshow_dot").style.top = h.toString() + "px";
+    var w = window.innerHeight * 0.5
+    document.getElementById("slideshow_bon").style.top = w.toString() + "px";
   </script>
 
   <div class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
@@ -97,11 +99,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                                  loading: 'lazy',
-                                  height: height,
-                                  sizes: "100vw",
-                                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                                }}
+                                   loading: 'lazy',
+                                   height: height,
+                                   sizes: "100vw",
+                                   widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                                 }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
