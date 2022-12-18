@@ -49,7 +49,7 @@
             {%- when 'image' -%}
               {%- if block.settings.news_image != blank -%}
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
-                <div class="news_div" style="padding:0px;margin:0px;">
+                <div class="news_div">
                   <p><img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                   {{ section.settings.news_t | escape }}
                   </p>
