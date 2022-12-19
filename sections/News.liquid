@@ -13,7 +13,7 @@
       {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 500 -%}
       <img
         srcset= "{{section.settings.image | image_url: width:section.settings.image_width }}, {{section.settings.image | image_url: width: image_size_2x }} 2x"
-        src="{{section.settings.image | image_url: width: 200}}"
+        src="{{section.settings.image | image_url: width: slider_h }}"
         alt="{{section.settings.image.alt | escape }}"
         loading="lazy"
         width="{{ section.settings.image.width }}"
@@ -22,6 +22,9 @@
       >
       {%- endif -%}
   </div>
+  <script>
+    var slider_h = window.innerWidth * 0.40;
+  </script>
 
   <div style="display: inline;width:40%;position:absolute;padding-left:50px">
     {%- if section.settings.ImageHeading!= blank-%}
@@ -40,6 +43,7 @@
   </div>
   <br>
   
+  
   <section id="news_slider" class="news_section">
   <button id="news_pre" class="news_bon">&#139;</button>
     {%- if section.blocks.size > 0 -%}
@@ -51,7 +55,7 @@
                 {%- assign news_image_size_2x = block.settings.news_image_width | times: 2 | at_most: 5760 -%}
                 <div class="news_div">
                   <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
-                  <p>{{ block.settings.news_t | escape }}</p>
+                  <p style="text-align: left;">{{ block.settings.news_t | escape }}</p>
                   <p>{{ block.settings.news_d | escape }}</p>
                   <script>
                     console.log("news_t"+block.settings.news_t+"d"+block.settings.news_d);
