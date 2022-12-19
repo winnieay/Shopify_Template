@@ -20,12 +20,12 @@
 {%- endstyle -%}
 
 {%- liquid
-       assign columns_mobile_int = section.settings.columns_mobile | plus: 0
-         assign show_mobile_slider = false
-           if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
-               assign show_mobile_slider = true
-            endif
-   -%}
+           assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+             assign show_mobile_slider = false
+               if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+                   assign show_mobile_slider = true
+                endif
+       -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-list-wrapper page-width isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
@@ -46,7 +46,7 @@
         <div class="slider-buttons no-js-hidden">
           <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}
           </button>
-          <div style="display:none;" class="slider-counter caption">
+          <div id="co_display" class="slider-counter caption">
             <span class="slider-counter--current">1</span>
             <span aria-hidden="true">
               /
@@ -56,18 +56,18 @@
             <span class="slider-counter--total">{{ section.blocks.size }}
             </span>
           </div>
-          <button style="float:right" type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}
+          <button id="float_left" type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}
           </button>
         </div>
       {%- endif -%}
 
       <ul class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items" id="Slider-{{ section.id }}" role="list">
         {%- liquid
-            assign columns = section.blocks.size
-                if columns > 3
-                 assign columns = 3
-                endif
-          -%}
+              assign columns = section.blocks.size
+                  if columns > 3
+                   assign columns = 3
+                  endif
+            -%}
         {%- for block in section.blocks -%}
 
 
