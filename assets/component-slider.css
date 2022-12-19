@@ -332,6 +332,10 @@ slider-component.slider-component-full-width {
   .slider:not(.slider--everywhere):not(.slider--desktop) + .slider-buttons {
     display: none;
   }
+  #span_slideshow_text{
+    color: black;
+    height: 500px;
+  }
 
 }
 
