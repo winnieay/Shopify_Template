@@ -55,7 +55,24 @@
           </li>
         {%- endfor -%}
       </ul>
-
+      {%- if show_mobile_slider -%}
+        <div class="slider-buttons no-js-hidden">
+          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true">
+              /
+            </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}
+            </span>
+            <span class="slider-counter--total">{{ section.blocks.size }}
+            </span>
+          </div>
+          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}
+          </button>
+        </div>
+      {%- endif -%}
     </slider-component>
 
     {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
@@ -79,6 +96,24 @@
         "id": "title",
         "default": "Collections",
         "label": "t:sections.collection-list.settings.title.label"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          }, {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          }, {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
       },
       {
         "type": "select",
@@ -107,8 +142,7 @@
         "step": 1,
         "default": 3,
         "label": "t:sections.collection-list.settings.columns_desktop.label"
-      },
-      {
+      }, {
         "type": "select",
         "id": "color_scheme",
         "options": [
