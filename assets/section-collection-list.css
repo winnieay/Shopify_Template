@@ -1,3 +1,12 @@
+#co_display{
+  display: none;
+}
+#float_left{
+  float: right;
+}
+#co_div{
+  
+}
 .collection-list {
   margin-top: 0;
   margin-bottom: 0;
