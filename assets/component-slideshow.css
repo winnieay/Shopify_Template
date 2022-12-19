@@ -131,6 +131,17 @@ slideshow-component .slideshow.banner {
     border-right: 0;
     border-left: 0;
   }
+  .banner__box {
+    padding: 4rem 3.5rem;
+    position: relative;
+    height: fit-content;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+    z-index: 1;
+    color: black;
+}
 
 }
 
