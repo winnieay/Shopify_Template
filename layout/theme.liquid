@@ -329,7 +329,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  </head>
+  <!--Gem_Page_Header_Script-->
+{% render 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
+</head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -391,5 +394,8 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- render 'layouthub_footer' -%}
-  </body>
+  <!--Gem_Page_Footer_Script-->
+{% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
+<!--End_Gem_Page_Footer_Script-->
+</body>
 </html>
