@@ -57,9 +57,6 @@
                   <img src="{{ block.settings.news_image | image_url: width: 350}}" alt="{{ block.settings.news_image.alt | escape }}" loading="lazy" style="margin-left:quto;margin-right:auto;">
                   <p style="text-align: left;">{{ block.settings.news_t | escape }}</p>
                   <p>{{ block.settings.news_d | escape }}</p>
-                  <script>
-                    console.log("news_t"+block.settings.news_t+"d"+block.settings.news_d);
-                  </script>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               {%- else -%}
