@@ -42,10 +42,10 @@
     {{ content_for_header }}
 
     {%- liquid
-          assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-          assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-          assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-        %}
+           assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+           assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+           assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+         %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -329,10 +329,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  <!--Gem_Page_Header_Script-->
-{% render 'gem-app-header-scripts' %}
-<!--End_Gem_Page_Header_Script-->
-</head>
+    <!--Gem_Page_Header_Script-->
+    {% render 'gem-app-header-scripts' %}
+    <!--End_Gem_Page_Header_Script-->
+  </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -346,9 +346,9 @@
     {% section 'announcement-bar' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      <!--{% section 'header' %}-->
+      {% section 'header' %}
       <!--LayoutHub-Workspace-Start-->
-    {{ content_for_layout }}
+      {{ content_for_layout }}
       <!--LayoutHub-Workspace-End-->
     </main>
 
@@ -394,8 +394,8 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     {%- render 'layouthub_footer' -%}
-  <!--Gem_Page_Footer_Script-->
-{% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
-<!--End_Gem_Page_Footer_Script-->
-</body>
+    <!--Gem_Page_Footer_Script-->
+    {% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
+    <!--End_Gem_Page_Footer_Script-->
+  </body>
 </html>
