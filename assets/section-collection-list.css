@@ -1,10 +1,10 @@
-#co_display{
+.co_counter{
   display: none;
 }
-#float_left{
+.float_right{
   float: right;
 }
-#co_div{
+.co_div{
   
 }
 .collection-list {
