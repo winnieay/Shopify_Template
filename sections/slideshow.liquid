@@ -90,7 +90,7 @@
     document.getElementById("sli").style.top = x.toString() + "px";
   </script>
 
-  <div id="sli" class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
+  <div id="sli" style="top:0px;" class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
       <style>
         #Slide-{{ section.id }}-{{ forloop.index }}.banner__media::after {
@@ -102,11 +102,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                                           loading: 'lazy',
-                                           height: height,
-                                           sizes: "100vw",
-                                           widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                                         }}
+                                             loading: 'lazy',
+                                             height: height,
+                                             sizes: "100vw",
+                                             widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                                           }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
