@@ -380,13 +380,13 @@ slider-component.slider-component-full-width {
 .slider-button--next .icon {
   transform: rotate(-90deg);
   position: absolute;
-  top: 70%;
+  top: 40%;
 }
 
 .slider-button--prev .icon {
   transform: rotate(90deg);
   position: absolute;
-  top: 70%;
+  top: 40%;
 }
 
 .slider-button--next:not([disabled]):hover .icon {
