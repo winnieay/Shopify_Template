@@ -73,22 +73,6 @@
           </li>
         {%- endfor -%}
       </ul>
-
-        <button
-          type="button"
-          class="slider-button slider-button--prev"
-          id="previous"
-          aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}
-        </button>
-        <button
-          type="button"
-          style="float: right;"
-          class="slider-button slider-button--next"
-          id="next"
-          aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}
-        </button>
-
-
     </slider-component>
 
     {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
