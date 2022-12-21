@@ -23,7 +23,7 @@
   {%- endstyle -%}
 {%- endif -%}
 
-<slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+<slideshow-component style="background: #F9F5F0 0% 0% no-repeat padding-box;" class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
 
   <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.bestseller_heading1}}
   </h1>
@@ -99,11 +99,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                                                   loading: 'lazy',
-                                                   height: height,
-                                                   sizes: "100vw",
-                                                   widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                                                 }}
+                                                    loading: 'lazy',
+                                                    height: height,
+                                                    sizes: "100vw",
+                                                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                                                  }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
