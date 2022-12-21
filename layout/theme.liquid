@@ -42,10 +42,10 @@
     {{ content_for_header }}
 
     {%- liquid
-            assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
-            assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
-            assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
-          %}
+              assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+              assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+              assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+            %}
 
     {% style %}
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
@@ -346,9 +346,9 @@
     {% section 'announcement-bar' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {% section 'header' %}
+      <!-- {% section 'header' %}-->
       <!--LayoutHub-Workspace-Start-->
-      {{ content_for_layout }}
+    {{ content_for_layout }}
       <!--LayoutHub-Workspace-End-->
     </main>
 
