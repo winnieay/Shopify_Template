@@ -24,6 +24,12 @@
 {%- endif -%}
 
 <slideshow-component class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
+
+  <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{section.settings.bestseller_heading1}}
+  </h1>
+  <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.bestseller_heading2}}
+  </h1>
+
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
 
 
@@ -93,11 +99,11 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag:
-                                                  loading: 'lazy',
-                                                  height: height,
-                                                  sizes: "100vw",
-                                                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                                                }}
+                                                   loading: 'lazy',
+                                                   height: height,
+                                                   sizes: "100vw",
+                                                   widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                                                 }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -194,6 +200,18 @@
     "class": "section",
     "settings": [
       {
+        "type": "text",
+        "id": "bestseller_heading1",
+        "label": "Heading1",
+        "default": "BEST SELLER"
+      },
+      {
+        "type": "text",
+        "id": "bestseller_heading2",
+        "label": "Heading2",
+        "default": "熱賣產品"
+      },
+      {
         "type": "select",
         "id": "layout",
         "options": [
@@ -228,8 +246,7 @@
         ],
         "default": "adapt_image",
         "label": "t:sections.slideshow.settings.slide_height.label"
-      },
-      {
+      }, {
         "type": "select",
         "id": "slider_visual",
         "options": [
@@ -246,8 +263,7 @@
         ],
         "default": "counter",
         "label": "t:sections.slideshow.settings.slider_visual.label"
-      },
-      {
+      }, {
         "type": "checkbox",
         "id": "auto_rotate",
         "label": "t:sections.slideshow.settings.auto_rotate.label",
