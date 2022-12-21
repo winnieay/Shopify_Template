@@ -146,7 +146,6 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "{{ shop.brand.logo }}",
           "logo_width": 170,
           "logo_position": "middle-left",
           "menu": "main-menu",
