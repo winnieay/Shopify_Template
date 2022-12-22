@@ -125,7 +125,7 @@
 
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 style="font: normal normal normal 25px/37px Noto Sans TC Light;" class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+              <h2 style="font: normal normal normal 25px Noto Sans TC Light;" class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
