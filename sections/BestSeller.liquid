@@ -108,7 +108,7 @@
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
           <span class="slider-counter--total">{{ section.blocks.size }}</span>
         {%- else -%}
-          <div class="slideshow__control-wrapper">
+          <div style="position:absolute;top:85%;width:100%" class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
               <button
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
