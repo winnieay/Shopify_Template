@@ -219,7 +219,7 @@
         "bestseller_heading1": "BEST SELLER",
         "bestseller_heading2": "熱賣產品",
         "layout": "full_bleed",
-        "slide_height": "adapt_image",
+        "slide_height": "small",
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 7,
@@ -231,7 +231,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "NEW ARRIVAL",
-        "title2": "Featured collection2",
+        "title2": "最新產品",
         "description": "",
         "show_description": false,
         "description_style": "body",
