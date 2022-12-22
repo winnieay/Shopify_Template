@@ -170,13 +170,8 @@
 
   <script>
     var screen = window.innerHeight;
-    var banner = document.getElementById('slideshow_com').offsetHeight;
-    document.getElementById("slideshow_com").style.transform = "scale(1," + (
-      screen / banner
-    ).toString() + ")";
-    document.getElementById("slideshow_ban").style.transform = "scale(1, " + (
-      screen / banner
-    ).toString() + ")";
+    document.getElementById("slideshow_com").style.height = screen.toString() + "px";
+    document.getElementById("slideshow_ban").style.height = screen.toString() + "px";
     var k = window.innerHeight * 0.8;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
