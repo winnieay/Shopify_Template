@@ -31,6 +31,13 @@
   role="region"
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}">
+
+  {%- if section.settings.bestseller_heading1 != blank or section.settings.bestseller_heading2 != blank -%}
+    <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{ section.settings.bestseller_heading1 }}</h1>
+    <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{ section.settings.bestseller_heading2 }}</h1>
+  {%- endif -%}
+
+
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
     <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
