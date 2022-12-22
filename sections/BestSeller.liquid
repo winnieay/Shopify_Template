@@ -137,7 +137,7 @@
             {%- endif -%}
           </div>
         </div>
-        <div style="width:50%;left:40%" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+        <div style="width:50%;left:50%" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
