@@ -112,7 +112,7 @@
   {%- endif -%}
 
   <div
-    id="sli"
+    id="slideshow_ban"
     class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
     id="Slider-{{ section.id }}"
     aria-live="polite"
@@ -149,19 +149,16 @@
         <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}
-              </h2>
+              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}
-                </span>
+                <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
-                <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
-                </a>
+                <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
           </div>
@@ -171,11 +168,10 @@
   </div>
 
 
-
   <script>
     var screen = window.innerHeight;
     document.getElementById("slideshow_com").style.height = screen.toString() + "px";
-    document.getElementById("sli").style.height = screen.toString() + "px";
+    document.getElementById("slideshow_ban").style.height = screen.toString() + "px";
     var k = window.innerHeight * 0.8;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
@@ -241,12 +237,6 @@
       </div>
     </noscript>
   {%- endif -%}
-
-  <script>
-    var h = window.innerHeight * 0.8;
-    console.log("screen height: " + window.innerHeight);
-    document.getElementById("slideshow_dot").style.top = h.toString() + "px";
-  </script>
 </slideshow-component>
 
 {%- if request.design_mode -%}
