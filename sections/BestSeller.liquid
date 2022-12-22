@@ -90,7 +90,7 @@
     {%- endfor -%}
   </div>
 
-  {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
+  {%- if section.blocks.size > 1 -%}
     <div style="position: absolute;height: 100%;width: 100%;" class="slideshow__controls slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
         style="position: absolute;top: 50%;z-index: 99;"
@@ -132,15 +132,6 @@
         aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
         aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}</button>
 
-      {%- if section.settings.auto_rotate -%}
-        <button
-          type="button"
-          class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}"
-          aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
-          {%- render 'icon-pause' -%}
-          {%- render 'icon-play' -%}
-        </button>
-      {%- endif -%}
     </div>
     <noscript>
       <div class="slider-buttons">
@@ -232,11 +223,6 @@
         ],
         "default": "counter",
         "label": "t:sections.slideshow.settings.slider_visual.label"
-      }, {
-        "type": "checkbox",
-        "id": "auto_rotate",
-        "label": "t:sections.slideshow.settings.auto_rotate.label",
-        "default": false
       }, {
         "type": "range",
         "id": "change_slides_speed",
