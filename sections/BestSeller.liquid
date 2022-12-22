@@ -137,7 +137,7 @@
             {%- endif -%}
           </div>
         </div>
-        <div style="width:50%;left:50%" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
+        <div style="width:50%;left:40%" class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
@@ -250,12 +250,33 @@
       {
         "type": "select",
         "id": "layout",
+        "options": [
+          {
+            "value": "full_bleed",
+            "label": "t:sections.slideshow.settings.layout.options__1.label"
+          }
+        ],
         "default": "full_bleed",
         "label": "t:sections.slideshow.settings.layout.label"
       },
       {
         "type": "select",
         "id": "slide_height",
+        "options": [
+          {
+            "value": "adapt_image",
+            "label": "t:sections.slideshow.settings.slide_height.options__1.label"
+          }, {
+            "value": "small",
+            "label": "t:sections.slideshow.settings.slide_height.options__2.label"
+          }, {
+            "value": "medium",
+            "label": "t:sections.slideshow.settings.slide_height.options__3.label"
+          }, {
+            "value": "large",
+            "label": "t:sections.slideshow.settings.slide_height.options__4.label"
+          }
+        ],
         "default": "small",
         "label": "t:sections.slideshow.settings.slide_height.label"
       }, {
