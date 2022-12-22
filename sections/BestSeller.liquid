@@ -116,14 +116,13 @@
         aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1">
-        <div style="width:50%;margin:0;justify-content: left;padding:0;" class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+        <div style="width:50%;margin:0;padding:0;" class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+          {%- if section.settings.bestseller_heading1 != blank or section.settings.bestseller_heading2 != blank -%}
+            <h1 style="padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{ section.settings.bestseller_heading1 }}</h1>
+            <h1 style="padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{ section.settings.bestseller_heading2 }}</h1>
+            <br>
+          {%- endif -%}
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-            {%- if section.settings.bestseller_heading1 != blank or section.settings.bestseller_heading2 != blank -%}
-              <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;">{{ section.settings.bestseller_heading1 }}</h1>
-              <h1 style="width:80%;padding-left:50px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{ section.settings.bestseller_heading2 }}</h1>
-              <br>
-            {%- endif -%}
-
             {%- if block.settings.heading != blank -%}
               <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
             {%- endif -%}
