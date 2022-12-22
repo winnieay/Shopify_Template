@@ -128,14 +128,14 @@
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
               <div
-                style="font-size: 14px;font-family: Noto Sans TC Light;text-align:left;width:100%"
+                style="font-size: 14px;font-family: Noto Sans TC Light;text-align:left;"
                 class="banner__text"
                 {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
-              <div style="font-size: 20px;font-family: Noto Sans TC Light;" class="banner__buttons">
+              <div style="font-size: 20px;font-family: Noto Sans TC Light;width:100%;" class="banner__buttons">
                 <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
