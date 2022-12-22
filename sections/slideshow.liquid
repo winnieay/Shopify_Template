@@ -26,6 +26,7 @@
 {%- endif -%}
 
 <slideshow-component
+  id="slideshow_com"
   style="top:0px;"
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region"
@@ -98,7 +99,7 @@
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
 
     <div
-      style="position:absolute;z-index:99;"
+      style="position:absolute;z-index:99;width:100%"
       id="slideshow_bon"
       class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <button
@@ -175,6 +176,9 @@
 
 
   <script>
+    var screen = window.innerHeight;
+    document.getElementById("slideshow_com").style.height = w.toString() + "px";
+    document.getElementById("sli").style.height = w.toString() + "px";
     var k = window.innerHeight * 0.8;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
