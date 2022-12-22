@@ -122,18 +122,20 @@
           <br>
         {%- endif -%}
         <div style="width:50%;margin:0;padding:0;" class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-
           <div class="slideshow__text banner__box content-container content-container--full-width-mobile color-{{ block.settings.color_scheme }} gradient slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}</h2>
+              <h2 style="font-size: 25px;font-family: Noto Sans TC Light;" class="banner__heading {{ block.settings.heading_size }}">{{ block.settings.heading | escape }}<br>{{ block.settings.heading2 | escape }}</h2>
             {%- endif -%}
             {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
+              <div
+                style="font-size: 20px;font-family: Noto Sans TC Light;"
+                class="banner__text"
+                {{ block.shopify_attributes }}>
                 <span>{{ block.settings.subheading | escape }}</span>
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons">
+              <div style="font-size: 20px;font-family: Noto Sans TC Light;" class="banner__buttons">
                 <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               </div>
             {%- endif -%}
@@ -346,6 +348,12 @@
             "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
           },
           {
+            "type": "text",
+            "id": "heading2",
+            "default": "Image slide",
+            "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+          },
+          {
             "type": "select",
             "id": "heading_size",
             "options": [
@@ -362,8 +370,7 @@
             ],
             "default": "h1",
             "label": "t:sections.all.heading_size.label"
-          },
-          {
+          }, {
             "type": "text",
             "id": "subheading",
             "default": "Tell your brand's story through images",
