@@ -120,7 +120,7 @@
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
 
 
-    <div style="position:relative;z-index:99;"
+    <div style="position:relative;z-index:99;left:50%;"
       id="slideshow_dot"
       class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
       <!--
@@ -176,7 +176,7 @@
 
 
   <script>
-    var k = window.innerHeight * 0.95;
+    var k = window.innerHeight * 0.90;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
     document.getElementById("slideshow_bon").style.top = w.toString() + "px";
