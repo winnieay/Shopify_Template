@@ -226,6 +226,7 @@
     },
     "Brands": {
       "type": "Brands",
+      "disabled": true,
       "blocks": {
         "2ed935b6-3e91-46e6-bde9-7a8d5f4c3d2e": {
           "type": "image",
