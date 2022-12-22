@@ -1,15 +1,15 @@
 <!--<link rel="stylesheet" href="{{ 'brands.css' | asset_url }}" media="print" onload="this.media='all'">-->
 <script src="{{'brands.js'|asset_url}}" defer="defer"></script>
-
+<link rel="stylesheet" href="{{ 'mobile.css' | asset_url }}" media="print" onload="this.media='all'">
 <div style="background: #F9F5F0;width:100%;margin:200px auto;overflow: hidden;position: relative;margin:0px;">
   <!--Header-->
 
 
 
   <!--slidershow-->
-    {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}<h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;"> {{section.settings.brands_heading1}}
+    {%- if section.settings.brands_heading1!= blank or brands_heading2!= blank-%}<h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:45px;margin-bottom:50px;margin-top:0px;padding-top:52px;" class="mobile_heading1"> {{section.settings.brands_heading1}}
     </h1>
-    <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.brands_heading2}}
+    <h1 style="padding-left:50px;width:80%;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;" class="mobile_heading2">{{section.settings.brands_heading2}}
     </h1>
   {%- endif -%}
   <button id="pre" class="span_img">&#139;</button>
