@@ -26,6 +26,7 @@
 {%- endif -%}
 
 <slideshow-component
+  id="slideshow_com"
   style="top:0px;"
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region"
@@ -126,7 +127,6 @@
         }
       </style>
       <div
-        id="slideshow_ban"
         class="slideshow__slide grid__item grid--1-col slider__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
@@ -170,8 +170,13 @@
 
   <script>
     var screen = window.innerHeight;
-    document.getElementById("slideshow_com").style.height = screen.toString() + "px";
-    document.getElementById("slideshow_ban").style.height = screen.toString() + "px";
+    var banner = document.getElementById('slideshow_com').offsetHeight;
+    document.getElementById("slideshow_com").style.transform = "scale(" + (
+      screen / banner
+    ).toString() + ")";
+    document.getElementById("slideshow_ban").style.transform = "scale(" + (
+      screen / banner
+    ).toString() + ")";
     var k = window.innerHeight * 0.8;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
