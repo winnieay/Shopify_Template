@@ -32,28 +32,6 @@
   aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
   aria-label="{{ section.settings.accessibility_info | escape }}">
 
-  <div
-    style="position:relative;z-index:99;"
-    id="slideshow_bon"
-    class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
-    <button
-      type="button"
-      style="float:left;"
-      class="prev slider-button slider-button--prev"
-      name="previous"
-      aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
-      aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-    </button>
-    <button
-      type="button"
-      style="float:right;"
-      class="next slider-button slider-button--next"
-      name="next"
-      aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
-      aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
-    </button>
-  </div>
-
 
 
   <div
@@ -119,6 +97,27 @@
 
   {%- if section.settings.auto_rotate and section.blocks.size > 1 -%}
 
+    <div
+      style="position:relative;z-index:99;"
+      id="slideshow_bon"
+      class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %}">
+      <button
+        type="button"
+        style="float:left;"
+        class="prev slider-button slider-button--prev"
+        name="previous"
+        aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
+        aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+      </button>
+      <button
+        type="button"
+        style="float:right;"
+        class="next slider-button slider-button--next"
+        name="next"
+        aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
+        aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
+      </button>
+    </div>
 
     <div style="position:absolute;z-index:99;left:50%;"
       id="slideshow_dot"
@@ -176,7 +175,7 @@
 
 
   <script>
-    var k = window.innerHeight * 0.75;
+    var k = window.innerHeight * 0.8;
     document.getElementById("slideshow_dot").style.top = k.toString() + "px";
     var w = window.innerHeight * 0.5;
     document.getElementById("slideshow_bon").style.top = w.toString() + "px";
