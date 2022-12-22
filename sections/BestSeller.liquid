@@ -180,7 +180,6 @@
           <div class="slideshow__control-wrapper">
             {%- for block in section.blocks -%}
               <button
-                style="position: absolute;top: 50%;left: 97%;z-index:99;"
                 class="slider-counter__link slider-counter__link--{{ section.settings.slider_visual }} link"
                 aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
                 aria-controls="Slider-{{ section.id }}">
@@ -195,6 +194,7 @@
         {%- endif -%}
       </div>
       <button
+        style="position: absolute;top: 50%;left: 97%;z-index:99;"
         type="button"
         class="slider-button slider-button--next"
         name="next"
