@@ -39,14 +39,7 @@
     position: unset;
     width: 100%;
   }
-  .field__input {
-    position: relative;
-    background-color: white;
-    width: 62%;
-    height: 41px;
-    color: black;
-    margin: 0;
-  }
+
   .newsletter-form__button {
     color: white;
     width: 30%;
@@ -85,6 +78,14 @@
       color: black;
       margin: 0;
     }
+    .field__input {
+      position: relative;
+      background-color: white;
+      width: 62%;
+      height: 41px;
+      color: black;
+      margin: 0;
+    }
 
 
 
@@ -102,12 +103,12 @@
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-                                                           class: 'header__heading-logo',
-                                                           widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                                                           height: logo_height,
-                                                           width: section.settings.logo_width,
-                                                           alt: logo_alt
-                                                         }}
+                                                            class: 'header__heading-logo',
+                                                            widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                                            height: logo_height,
+                                                            width: section.settings.logo_width,
+                                                            alt: logo_alt
+                                                          }}
           {%- else -%}
             <span class="h2" style="color:black">{{ shop.name }}
             </span>
