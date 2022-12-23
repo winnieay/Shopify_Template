@@ -118,6 +118,83 @@
         "swipe_on_mobile": true
       }
     },
+    "91510de1-7d0d-4df0-b582-ae13daa43143": {
+      "type": "BestSeller",
+      "blocks": {
+        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
+            "heading": "Blue Tansy Beauty Balm",
+            "heading2": "藍艾菊全效潤膚軟膏",
+            "heading_size": "h2",
+            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg",
+            "heading": "Blue Tansy Beauty Balm",
+            "heading2": "藍艾菊全效潤膚軟膏",
+            "heading_size": "h1",
+            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "right",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "24edf599-7123-41f9-8cab-cb77a581b112": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
+            "heading": "Blue Tansy Beauty Balm",
+            "heading2": "藍艾菊全效潤膚軟膏",
+            "heading_size": "h0",
+            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
+            "button_label": "了解更多",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-0",
+        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-1",
+        "24edf599-7123-41f9-8cab-cb77a581b112"
+      ],
+      "settings": {
+        "bestseller_heading1": "BEST SELLER",
+        "bestseller_heading2": "熱賣產品",
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "dots",
+        "change_slides_speed": 7,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "news": {
       "type": "news",
       "blocks": {
@@ -170,83 +247,6 @@
         "button_label": "了解更多",
         "Button_link": "shopify:\/\/blogs\/news",
         "link": "shopify:\/\/blogs\/news"
-      }
-    },
-    "91510de1-7d0d-4df0-b582-ae13daa43143": {
-      "type": "BestSeller",
-      "blocks": {
-        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-0": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
-            "heading": "Blue Tansy Beauty Balm",
-            "heading2": "藍艾菊全效潤膚軟膏",
-            "heading_size": "h2",
-            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg",
-            "heading": "Blue Tansy Beauty Balm",
-            "heading2": "藍艾菊全效潤膚軟膏",
-            "heading_size": "h1",
-            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "right",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "24edf599-7123-41f9-8cab-cb77a581b112": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
-            "heading": "Blue Tansy Beauty Balm",
-            "heading2": "藍艾菊全效潤膚軟膏",
-            "heading_size": "h2",
-            "subheading": "賞心悅目的藍色軟膏，含有多種超級強效的保濕和抗炎植物成分，滋潤及舒緩皮膚炎症。濃縮配方中並沒有添加任何穩定劑或乳化劑，軟膏接觸溫暖的皮膚會瞬間融化，令皮膚能夠快速吸收。",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-0",
-        "template--17299654869311__91510de1-7d0d-4df0-b582-ae13daa43143-16716876794cd0a533-1",
-        "24edf599-7123-41f9-8cab-cb77a581b112"
-      ],
-      "settings": {
-        "bestseller_heading1": "BEST SELLER",
-        "bestseller_heading2": "熱賣產品",
-        "layout": "full_bleed",
-        "slide_height": "small",
-        "slider_visual": "dots",
-        "change_slides_speed": 7,
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
       }
     },
     "Brands": {
@@ -328,8 +328,8 @@
     "dceebf0e-d7b5-4d3e-b397-dd09b953901e",
     "marquee",
     "featured_collection",
-    "news",
     "91510de1-7d0d-4df0-b582-ae13daa43143",
+    "news",
     "Brands"
   ]
 }
