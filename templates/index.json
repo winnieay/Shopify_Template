@@ -8,7 +8,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/makeup-brushes.jpg",
             "heading": "1. 廣告文案中用的假字",
-            "heading_size": "h1",
             "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
             "button_label": "了解更多",
             "link": "",
@@ -26,7 +25,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/a-bunch-of-clean-makeup-brushes-together.jpg",
             "heading": "2. 廣告文案中用的假字",
-            "heading_size": "h1",
             "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
             "button_label": "了解更多",
             "link": "",
@@ -44,7 +42,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bright-eye-makeup-brushes.jpg",
             "heading": "3. 廣告文案中用的假字",
-            "heading_size": "h1",
             "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
             "button_label": "了解更多",
             "link": "",
@@ -62,7 +59,6 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/makeup-powders-and-brush.jpg",
             "heading": "4. 廣告文案中用的假字",
-            "heading_size": "h1",
             "subheading": "你現在閱讀的，並不是真的文案。這些文字，只顯示文案將會擺放的位置。我們會稱呼這些文案為「假字」。",
             "button_label": "了解更多",
             "link": "",
@@ -96,6 +92,30 @@
       "type": "marquee",
       "settings": {
         "marquee": "歡迎光臨小豬集雜貨店（香港$480 \/ 澳門$700 \/ 台灣$1800順豐免運 ) Please contact us for worldwide shipping!"
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "NEW ARRIVAL",
+        "title2": "最新產品",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 7,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true
       }
     },
     "news": {
@@ -229,32 +249,6 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "NEW ARRIVAL",
-        "title2": "最新產品",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 7,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 52,
-        "padding_bottom": 8
-      }
-    },
     "Brands": {
       "type": "Brands",
       "blocks": {
@@ -333,9 +327,9 @@
   "order": [
     "dceebf0e-d7b5-4d3e-b397-dd09b953901e",
     "marquee",
+    "featured_collection",
     "news",
     "91510de1-7d0d-4df0-b582-ae13daa43143",
-    "featured_collection",
     "Brands"
   ]
 }
