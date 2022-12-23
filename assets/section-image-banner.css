@@ -19,7 +19,7 @@
   }
   #bestsellerright {
     width: 100%;
-    
+    left:0;
     /*style="width:50%;left:50%" */
   }
 }
