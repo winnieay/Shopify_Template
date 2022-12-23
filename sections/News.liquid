@@ -14,12 +14,18 @@
         display:unset;
         float:unset;
         text-align:unset;
+        /*
+          style="display:inline;width:50%;float:left;text-align: center;"
+        */
       }
       .newsright {
         width: 100vw;
         display: unset;
         position:unset;
         padding:30px
+        /*
+          style="display: inline;width:40%;position:absolute;padding-left:50px"
+        */
       }
 
     }
@@ -32,7 +38,7 @@
     <h1 style="width:100%;padding-left:30px;font: normal normal normal 16px/24px Noto Sans TC Light;letter-spacing: 0px;color: #C79090;font-size:25px;margin-bottom:50px;">{{section.settings.news_heading2}}</h1>
   {%- endif -%}
 
-  <div style="display:inline;width:50%;float:left;text-align: center;">
+  <div >
     {%- if section.settings.image -%}
       {%- assign image_size_2x = section.settings.image_width | times: 2 | at_most: 500 -%}
       <img
@@ -50,7 +56,7 @@
     var slider_h = window.innerWidth * 0.40;
   </script>
 
-  <div style="display: inline;width:40%;position:absolute;padding-left:50px">
+  <div >
     {%- if section.settings.ImageHeading!= blank-%}
       <h2 class="banner__heading {{ section.settings.ImageHeading_size }}" style="margin-top: 0px;">{{ section.settings.ImageHeading | escape }}</h2>
     {%- endif -%}   
