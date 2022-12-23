@@ -39,7 +39,7 @@
     padding-left:70px;
   }
 
-  @media screen and (max: 485px) {
+  @media screen and (max-width: 485px) {
     .header__heading{
       padding-left:0px;
     }
@@ -49,8 +49,12 @@
     }
   }
   @media screen and (min-width: 990px) {
-    header-drawer {
-     
+    .header__heading-logo {
+      max-width: {{ section.settings.logo_width }}px;
+      padding-left:70px;
+    }
+    .header__heading{
+      padding-left:70px;
     }
   }
 
