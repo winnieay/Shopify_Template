@@ -54,9 +54,16 @@
       </div>
       <button style="position:absolute;top:50%;left:97%;z-index:99;" type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
       </button>
+      {%- if section.settings.auto_rotate -%}
+        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+          {%- render 'icon-pause' -%}
+          {%- render 'icon-play' -%}
+        </button>
+      {%- endif -%}
 
 
     </div>
+
     <noscript>
       <div class="slider-buttons">
         <div class="slider-counter">
@@ -82,10 +89,10 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
-                     loading: 'lazy',
-                     height: height,
-                     sizes: "100vw",
-                     widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                      loading: 'lazy',
+                      height: height,
+                      sizes: "100vw",
+                      widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -144,6 +151,12 @@
       </div>
       <button style="position:absolute;top:50%;left:97%;z-index:99;" type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-caret' %}
       </button>
+      {%- if section.settings.auto_rotate -%}
+        <button type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+          {%- render 'icon-pause' -%}
+          {%- render 'icon-play' -%}
+        </button>
+      {%- endif -%}
 
     </div>
     <noscript>
@@ -432,4 +445,4 @@
       }
     ]
   }
-{% endschema %}
+{% endschema %}}
