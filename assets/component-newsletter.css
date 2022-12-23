@@ -67,10 +67,44 @@
     font-size: 15px;
   }
 }
+@media(max-width:650px) {
+  #fl{
+    display: none;
+  }
+}
+
 
 @media(max-width:521px) {
   #fl{
     display: none;
+  }
+  .field__input {
+    position: relative;
+    background-color: white;
+    width: 200px;
+    height: 41px;
+    color: black;
+    margin: 0;
+  }
+  .field {
+    width: 200px;
+  }
+
+}
+@media(max-width:521px) {
+  #fl{
+    display: none;
+  }
+  .field__input {
+    position: relative;
+    background-color: white;
+    width: 150px;
+    height: 41px;
+    color: black;
+    margin: 0;
+  }
+  .field {
+    width: 150px;
   }
 }
 
