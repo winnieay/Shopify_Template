@@ -99,7 +99,6 @@
   @media(max-width:900px) and (min-width:780px) {
     .field_lable {
       font-size: 12px;
-      color: black;
     }
   }
 {%- endstyle -%}
@@ -115,12 +114,12 @@
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-                                                                         class: 'header__heading-logo',
-                                                                         widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                                                                         height: logo_height,
-                                                                         width: section.settings.logo_width,
-                                                                         alt: logo_alt
-                                                                       }}
+                                                                        class: 'header__heading-logo',
+                                                                        widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                                                        height: logo_height,
+                                                                        width: section.settings.logo_width,
+                                                                        alt: logo_alt
+                                                                      }}
           {%- else -%}
             <span class="h2" style="color:black">{{ shop.name }}
             </span>
@@ -208,7 +207,7 @@
                     aria-describedby="ContactFooter-success"
                     {% endif %}
                     placeholder="Email address 電子郵件" required>
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                  <label class="field_label" for="NewsletterForm--{{ section.id }}" style="color:black;">
                     Email address 電子郵件
                   </label>
                   <!--WI MO-->
