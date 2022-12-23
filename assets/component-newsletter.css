@@ -64,13 +64,16 @@
     margin-top: 10px;
     left:unset;
   }
+  #fl{
+    font-size: 12px;
+  }
 
 
 
 }
 
 @media(max-width:411px) {
-  .field__lable {
+  #fl{
     display: none;
   }
 }
