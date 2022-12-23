@@ -51,9 +51,13 @@
   .field {
     width: 71%;
   }
+  .field_label {
+    color: black;
+    font-size: 25px;
+  }
 
 
-  @media screen and (min-width: 550px) {
+  @media screen and (min-width: 749px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
     }
@@ -91,6 +95,10 @@
       color: black;
       margin: 0;
     }
+    .field_label {
+      color: black;
+      font-size: 14px;
+    }
 
 
 
@@ -108,12 +116,12 @@
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-                                                                 class: 'header__heading-logo',
-                                                                 widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                                                                 height: logo_height,
-                                                                 width: section.settings.logo_width,
-                                                                 alt: logo_alt
-                                                               }}
+                                                                   class: 'header__heading-logo',
+                                                                   widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                                                   height: logo_height,
+                                                                   width: section.settings.logo_width,
+                                                                   alt: logo_alt
+                                                                 }}
           {%- else -%}
             <span class="h2" style="color:black">{{ shop.name }}
             </span>
@@ -201,7 +209,7 @@
                     aria-describedby="ContactFooter-success"
                     {% endif %}
                     placeholder="Email address 電子郵件" required>
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}" style="color:black;font-size:14px;">
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
                     Email address 電子郵件
                   </label>
                   <!--WI MO-->
