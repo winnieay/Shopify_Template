@@ -20,8 +20,7 @@
       .newsleft {
         width: 100vw;
         display:unset;
-        float:unset;
-        text-align:unset;
+        text-align:center;
         /*
           style="display:inline;width:50%;float:left;text-align: center;"
         */
@@ -30,7 +29,6 @@
         width: 100vw;
         display: unset;
         position:unset;
-        padding:30px;
         /*
           style="display: inline;width:40%;position:absolute;padding-left:50px"
         */
@@ -38,6 +36,11 @@
       .news_bon{
         top:80%;
       }
+      .padding_lr{
+        padding-left:30px;
+        padding-right:30px;
+      }
+      
 
     }
 {% endstylesheet %}
@@ -69,15 +72,15 @@
 
   <div class="newsright">
     {%- if section.settings.ImageHeading!= blank-%}
-      <h2 class="banner__heading {{ section.settings.ImageHeading_size }}" style="margin-top: 0px;">{{ section.settings.ImageHeading | escape }}</h2>
+      <h2 class="padding_lr banner__heading {{ section.settings.ImageHeading_size }}" style="margin-top: 0px;">{{ section.settings.ImageHeading | escape }}</h2>
     {%- endif -%}   
     {%- if section.settings.subheading!= blank-%}
-      <div class="banner__text" {{ block.shopify_attributes }}>
+      <div class="padding_lr banner__text" {{ block.shopify_attributes }}>
         <span>{{ section.settings.subheading| escape }}</span>
       </div>
     {%- endif -%} 
     {%- if section.settings.button_label!= blank-%}
-      <div class="banner__buttons">
+      <div class="padding_lr banner__buttons">
         <a{% if section.settings.Button_link %} href="{{section.setting.Button_link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ section.settings.button_label| escape }}</a>
       </div>
     {%- endif -%} 
