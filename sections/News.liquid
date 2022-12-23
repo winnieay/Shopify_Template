@@ -94,7 +94,7 @@
       </div>
     {%- endif -%} 
     {%- if section.settings.button_label!= blank-%}
-      <div style="width:44px;background: #C79090;margin-top:10px;" class="padding_lr banner__buttons">
+      <div style="height:44px;background: #C79090;margin-top:10px;" class="padding_lr banner__buttons">
         <a{% if section.settings.Button_link %} href="{{section.setting.Button_link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ section.settings.button_label| escape }}</a>
       </div>
     {%- endif -%} 
