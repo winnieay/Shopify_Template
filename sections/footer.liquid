@@ -33,18 +33,12 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
   .footerleft {
-    position: absolute;
-    left: 10%;
-    width: 40%;
-    padding: 10px;
-    display: inline;
+    position: unset;
+    width: 100%;
   }
   .footerright {
-    position: absolute;
-    right: 10%;
+    position: unset;
     width: 40%;
-    padding: 10px;
-    display: inline;
   }
 
   @media screen and (min-width: 750px) {
@@ -57,13 +51,20 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
     .footerleft {
-      position: unset;
-      width: 100%;
+      position: absolute;
+      left: 10%;
+      width: 40%;
+      padding: 10px;
+      display: inline;
     }
     .footerright {
-      position: unset;
+      position: absolute;
+      right: 10%;
       width: 40%;
+      padding: 10px;
+      display: inline;
     }
+
   }
 {%- endstyle -%}
 
@@ -78,12 +79,12 @@
             {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
             {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
             {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-                                   class: 'header__heading-logo',
-                                   widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                                   height: logo_height,
-                                   width: section.settings.logo_width,
-                                   alt: logo_alt
-                                 }}
+                                    class: 'header__heading-logo',
+                                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                                    height: logo_height,
+                                    width: section.settings.logo_width,
+                                    alt: logo_alt
+                                  }}
           {%- else -%}
             <span class="h2" style="color:black">{{ shop.name }}
             </span>
