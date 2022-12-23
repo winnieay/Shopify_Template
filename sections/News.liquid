@@ -3,6 +3,14 @@
 <script src="{{'news.js'|asset_url}}" defer="defer"></script>
 
 {% stylesheet %}
+
+  .newsleft {    
+    display:inline;width:50%;float:left;text-align: center;
+  }
+  .newsright {
+    display: inline;width:40%;position:absolute;padding-left:50px;
+  }
+
   @media screen and (max-width: 485px) {
       #Slider-{{ section.id }}: : before, #Slider-{{ section.id }}.media::before, #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
         padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
