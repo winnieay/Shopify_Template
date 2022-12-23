@@ -57,7 +57,7 @@
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
-              <div style="font-size: 20px;font-family: Noto Sans TC Light;width:44px;background: #C79090;" class="banner__buttons">
+              <div style="font-size: 20px;font-family: Noto Sans TC Light;background: #C79090;" class="banner__buttons">
                 <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
                 </a>
               </div>
