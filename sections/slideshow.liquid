@@ -82,10 +82,10 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
-                loading: 'lazy',
-                height: height,
-                sizes: "100vw",
-                widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                 loading: 'lazy',
+                 height: height,
+                 sizes: "100vw",
+                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -103,7 +103,7 @@
               </div>
             {%- endif -%}
             {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons">
+              <div style="background: #798672;width:44px" class="banner__buttons">
                 <a {% if block.settings.link %}href="{{ block.settings.link }}"{% else %}role="link"aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}
                 </a>
               </div>
@@ -432,4 +432,4 @@
       }
     ]
   }
-{% endschema %}}}
+{% endschema %}}}}
