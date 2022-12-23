@@ -12,16 +12,6 @@
         content: '';
         display: block;
       }
-    }
-
-    @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}: : before, #Slider-{{ section.id }}.media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-    @media screen and (max-width: 485px) {
       .bestsellerleft {
         width: 100%;
       }
@@ -31,7 +21,13 @@
       }
 
     }
-    @media screen and (min-width: 485px) {
+
+    @media screen and (min-width: 750px) {
+      #Slider-{{ section.id }}: : before, #Slider-{{ section.id }}.media::before {
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
       .bestsellerleft {
         width: 50%;
         margin: 0;
@@ -43,7 +39,6 @@
         left: 50%;
         /*style="width:50%;left:50%" */
       }
-
     }
   {%- endstyle -%}
 {%- endif -%}
@@ -91,10 +86,10 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
-               loading: 'lazy',
-               height: height,
-               sizes: "100vw",
-               widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                 loading: 'lazy',
+                 height: height,
+                 sizes: "100vw",
+                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -444,4 +439,4 @@
       }
     ]
   }
-{% endschema %}}}
+{% endschema %}}}}}
