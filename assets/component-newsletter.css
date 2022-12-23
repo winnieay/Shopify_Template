@@ -71,6 +71,9 @@
   #fl{
     display: none;
   }
+  .footer{
+    height: 800px;
+  }
 }
 
 
@@ -89,7 +92,9 @@
   .field {
     width: 180px;
   }
-
+  .footer{
+    height: 900px;
+  }
 }
 @media(max-width:493px) {
   #fl{
