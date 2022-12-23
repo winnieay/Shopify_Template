@@ -86,7 +86,7 @@
 
   <div class="newsright">
     {%- if section.settings.ImageHeading!= blank-%}
-      <h2 class="padding_lr banner__heading {{ section.settings.ImageHeading_size }}" style="margin-top: 0px;">{{ section.settings.ImageHeading | escape }}</h2>
+      <h2 class="padding_lr banner__heading {{ section.settings.ImageHeading_size }}" style="margin-top: 0px;font-size:20px;">{{ section.settings.ImageHeading | escape }}</h2>
     {%- endif -%}   
     {%- if section.settings.subheading!= blank-%}
       <div class="padding_lr banner__text" {{ block.shopify_attributes }}>
@@ -188,16 +188,8 @@
           "id": "heading_size",
           "options": [
             {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
               "value": "h1",
               "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
             }
           ],
           "default": "h1",
