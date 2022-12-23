@@ -15,6 +15,7 @@
   height: 41px;
   margin-right: 0;
   margin-top: 10px;
+  left:40%;
 }
 .field {
   width: 71%;
@@ -55,6 +56,14 @@
     color: black;
     margin: 0;
   }
+  .newsletter-form__button {
+    color: white;
+    width: 30%;
+    height: 41px;
+    margin-right: 0;
+    margin-top: 10px;
+    left:unset;
+  }
 
 
 
@@ -64,6 +73,7 @@
   .field__lable {
     font-size: 10px;
   }
+  
 }
 
 
