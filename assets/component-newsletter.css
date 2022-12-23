@@ -69,11 +69,10 @@
 
 }
 
-@media(max-width:900px) and (min-width:780px) {
+@media(max-width:411px) {
   .field__lable {
-    font-size: 10px;
+    display: none;
   }
-  
 }
 
 
