@@ -81,13 +81,13 @@
   .field__input {
     position: relative;
     background-color: white;
-    width: 200px;
+    width: 180px;
     height: 41px;
     color: black;
     margin: 0;
   }
   .field {
-    width: 200px;
+    width: 180px;
   }
 
 }
@@ -98,13 +98,13 @@
   .field__input {
     position: relative;
     background-color: white;
-    width: 130px;
+    width: 150px;
     height: 41px;
     color: black;
     margin: 0;
   }
   .field {
-    width: 130px;
+    width: 150px;
   }
 }
 
