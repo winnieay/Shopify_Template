@@ -2,6 +2,29 @@
 <link rel="stylesheet" href="{{ 'mobile_heading.css' | asset_url }}" media="print" onload="this.media='all'">
 <script src="{{'news.js'|asset_url}}" defer="defer"></script>
 
+{% stylesheet %}
+  @media screen and (max-width: 485px) {
+      #Slider-{{ section.id }}: : before, #Slider-{{ section.id }}.media::before, #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+      .newsleft {
+        width: 100vw;
+        display:unset;
+        float:unset;
+        text-align:unset;
+      }
+      .newsright {
+        width: 100vw;
+        display: unset;
+        position:unset;
+        padding:30px
+      }
+
+    }
+{% endstylesheet %}
+
 
 <div style="width:100%;height:auto;padding-bottom:50px;background: #EDE7DB 0% 0% no-repeat padding-box;overflow: hidden;position: relative;" >
   {%- if section.settings.news_heading1!= blank or section.settings.news_heading2!= blank-%}
@@ -173,9 +196,7 @@
   }
 {% endschema %}
 
-{% stylesheet %}
 
-{% endstylesheet %}
 
 {% javascript %}
 {% endjavascript %}
