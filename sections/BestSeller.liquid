@@ -24,7 +24,6 @@
         width: 50%;
         margin: 0;
         padding: 0;
-
       }
       .bestsellerright {
         width: 50%;
@@ -35,8 +34,6 @@
 {%- endif -%}
 
 <slideshow-component style="background: #F9F5F0;" class="slider-mobile-gutter {% if section.settings.show_text_below %} mobile-text-below{% endif %}" role="region" aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}">
-
-
   <div class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}" id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="{{ section.settings.auto_rotate }}" data-speed="{{ section.settings.change_slides_speed }}">
     {%- for block in section.blocks -%}
       <style>
@@ -77,10 +74,10 @@
           {%- if block.settings.image -%}
             {%- assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round -%}
             {{ block.settings.image | image_url: width: 3840 | image_tag: 
-                 loading: 'lazy',
-                 height: height,
-                 sizes: "100vw",
-                 widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
+                    loading: 'lazy',
+                    height: height,
+                    sizes: "100vw",
+                    widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840' }}
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -430,4 +427,4 @@
       }
     ]
   }
-{% endschema %}}
+{%endschema %}}
