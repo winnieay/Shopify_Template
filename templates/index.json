@@ -168,7 +168,7 @@
             "button_label": "了解更多",
             "link": "",
             "button_style_secondary": false,
-            "box_align": "middle-center",
+            "box_align": "middle-left",
             "show_text_box": true,
             "text_alignment": "left",
             "image_overlay_opacity": 0,
